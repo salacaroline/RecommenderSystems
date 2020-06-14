@@ -1,0 +1,10 @@
+{
+    "require": {
+        "elasticsearch/elasticsearch": "~7.0"
+
+
+    },
+    "require": {
+        "nlp-tools/nlp-tools": "1.0. *@dev"
+    }
+}
