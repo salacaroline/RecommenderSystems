@@ -1,0 +1,46 @@
+Array ( 
+[took] => 12 
+[timed_out] => 
+[_shards] => Array ( 
+	[total] => 1 
+	[successful] => 1 
+	[skipped] => 0 
+	[failed] => 0 
+) 
+[hits] => Array ( 
+	[total] => Array ( 
+		[value] => 1798 
+		[relation] => eq 
+	) 
+	[max_score] => 42.2137 
+	[hits] => Array ( 
+		[0] => Array ( 
+			[_index] => artigos 
+			[_type] => _doc 
+			[_id] => vwmxCnIBjJXsSiKIT8h7 
+			[_score] => 42.2137 
+			[_source] => Array ( 
+				[person_name] => Clarisse Sieckenius de Souza 
+				[paper_id] => 4770 
+				[paper_year] => 2014 
+				[paper_title] => Characterizing the Tool-notation-people Triplet in Software Modeling Tasks 
+				[paper_abstract_EN] => The existence of some kind of relationship between the usability of software development tools and the quality of use of the development process end product would not be surprising. Yet, this topic hasn’t attracted a substantial share of interest among HCI or Software Engineering researchers, possibly because we lack the appropriate conceptual and technical tools to address the problem. In this paper, we articulate a tool-notation-people triplet and suggest that it can be used in interaction design evaluation of modeling tools used by many software developers. The evaluation is carried out with a specific method that combines cognitive and communicative dimensions of such tools and characterizes how the tool-notation-people triplet is instantiated for the case under examination. We demonstrate the value of our proposal with a study of IBM RSA, a popular software modeling tool. The interest of this work for the HCI community is to provide a set of resourceful tools – combined method and triplet – to identify and collect interaction issues that could be used to improve the design of modeling support tools. 
+				[keyword] => usability 
+			) 
+		) 
+	[1] => Array ( 
+		[_index] => artigos 
+		[_type] => _doc 
+		[_id] => LwmxCnIBjJXsSiKIT8l7 
+		[_score] => 42.2137 
+		[_source] => Array ( 
+			[person_name] => Juliana Jansen Ferreira 
+			[paper_id] => 4770 
+			[paper_year] => 2014 
+			[paper_title] => Characterizing the Tool-notation-people Triplet in Software Modeling Tasks [paper_abstract_EN] => The existence of some kind of relationship between the usability of software development tools and the quality of use of the development process end product would not be surprising. Yet, this topic hasn’t attracted a substantial share of interest among HCI or Software Engineering researchers, possibly because we lack the appropriate conceptual and technical tools to address the problem. In this paper, we articulate a tool-notation-people triplet and suggest that it can be used in interaction design evaluation of modeling tools used by many software developers. The evaluation is carried out with a specific method that combines cognitive and communicative dimensions of such tools and characterizes how the tool-notation-people triplet is instantiated for the case under examination. We demonstrate the value of our proposal with a study of IBM RSA, a popular software modeling tool. The interest of this work for the HCI community is to provide a set of resourceful tools – combined method and triplet – to identify and collect interaction issues that could be used to improve the design of modeling support tools. 
+			[keyword] => usability 
+		) 
+	) 
+) 
+) 
+)

@@ -39,11 +39,6 @@ if(!empty($_COOKIE['login'])){
         echo"<h3>Artigos recomendados de acordo com seu perfil:</h3>";
         echo "<br>";
 
-
-
-
-
-
       // }else{
       //   echo"Bem-Vindo, convidado <br>";
       //   //echo"<h4>Artigos recomendados de acordo com seu perfil:</h4>;
@@ -113,10 +108,6 @@ if (!empty($_REQUEST['dislikes'])) {
 
 }
 
-
-
-
-
 // echo $like;
 // echo $dislike;
 
@@ -163,7 +154,10 @@ if (!empty($_REQUEST['dislikes'])) {
    echo "<br>";
    echo '<a href="pesquisa.php" class="btn btn-primary">Pesquisar</a> ';
    echo "<br>";
+   
+   //monta a string com os termos do perfil e a prioridade
    $perfil_relevante=explode(",",$perfil_relevante);
+   $words = $perfil_relevante;
    $peso=count($perfil_relevante);
    for($i=0; $i<count($perfil_relevante);$i++){
 
@@ -173,26 +167,25 @@ if (!empty($_REQUEST['dislikes'])) {
    }
    $perfil_relevante=implode(" ", $perfil_relevante);
 
-
-
-
-
+   //parâmetros para o ES
    $params2 = [
        'index' => 'artigos',
-       'size'=> 100,
+       'size'=> 80,
        'body' => [
            "query"=> [
-               "simple_query_string" =>[
+               "query_string" =>[
                  "query" => $perfil_relevante,
                  "fields" => ["paper_title", "paper_abstract_EN", "keyword"],
                  "default_operator"=> "or"
-
                ]
            ]
        ]
    ];
-  //
-    $results2 = $client->search($params2);
+  
+  $results2 = $client->search($params2);
+
+  //imprimir a resposta inteira
+  //print_r($results2);
 
   $filterResult = [];
   $contador=0;
@@ -248,17 +241,20 @@ if (!empty($_REQUEST['dislikes'])) {
 
   $titleArray = [];
   $personArray = [];
+  $idEsArray = [];
 
   $block = "";
   if (!empty($like) || !empty($dislike) ) {
     $block = "disabled";
   }
-
+  //indexa resutados pelo título do arquivo
   foreach ($results2['hits']['hits'] as $hit) {
     if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']])) {
       $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
+      $idEsArray[$hit['_source']['paper_title']] = $hit['_id'];
     }
   }
+  //obtem todos os autores do artigo em um outro array
   foreach ($results2['hits']['hits'] as $hit) {
     foreach ($titleArray as $key => $value) {
       if ($hit['_source']['paper_title'] == $value['paper_title']) {
@@ -276,6 +272,58 @@ if (!empty($_REQUEST['dislikes'])) {
       }
     }
   }
+  
+  //cria a matriz de resultados por palavras
+  for ($i=0; $i < count($words); $i++) { 
+    $resultsPerWord[$words[$i]] = 0;   
+  }
+
+  echo "Matriz inicial: <br>";
+  print_r($resultsPerWord);
+  echo "<br><br><br><br>";
+
+  
+  $caracteres = array("(", ")", ":");
+  //Inicio: Pós-filtro proposto
+  //Para cada artigo dos resultados fazer explain
+  foreach ($idEsArray as $key => $value) {
+
+    $params3 = [
+          'id' => $value,
+          'index' => 'artigos',
+          'body' => [
+               "query"=> [
+                   "query_string" =>[
+                     "query" => $perfil_relevante,
+                     "fields" => ["paper_title", "paper_abstract_EN", "keyword"],
+                     "default_operator"=> "or"
+                   ]
+               ]
+           ]
+       ];
+      
+    $results3 = $client->explain($params3);
+    foreach ($results3['explanation']['details'] as $word) {
+
+        echo "word: <br>";
+        print_r($word);
+        echo "<br><br><br><br>";    
+        // foreach ($word['details'] as $key => $value) {
+        //   $aux = explode(" ", str_replace($caracteres, " ", strtoupper($value['description'])));
+        //   $resultsPerWord[$aux[2]] ++;
+        // }
+    }  
+    break;
+  }
+
+  
+
+
+
+
+
+
+
 echo '  <div class="col-md-7 control-label">
           <p class="help-block"><h11>*</h11> Não esqueça de enviar sua avaliação dos artigos no final da página! </p><br><br>
         </div>
