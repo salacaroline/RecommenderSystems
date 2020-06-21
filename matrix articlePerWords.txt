@@ -1,0 +1,86 @@
+Array ( 
+	[Characterizing the Tool-notation-people Triplet in Software Modeling Tasks] => Array ( 
+		[COGNITIVE] => 1 
+		[USABILITY] => 2 
+		[HCI] => 1 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Human Error Simulation as an Aid to HCI Design for Critical Systems] => Array ( 
+		[COGNITIVE] => 2 
+		[USABILITY] => 0 
+		[HCI] => 2 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Sugestões para projetos de interface que usam rastreamento de cabeça e comandos de voz] => Array ( 
+		[COGNITIVE] => 1 
+		[USABILITY] => 1 
+		[HCI] => 0 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Avaliação por Inspeção: Comparação entre Métodos de Base Prática, Cognitiva e Semiótica] => Array ( 
+		[COGNITIVE] => 2 
+		[USABILITY] => 0 
+		[HCI] => 1 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Caracterizando Desafios de Interação com Sistemas de Mineração de Regras de Associação] => Array ( 
+		[COGNITIVE] => 1 
+		[USABILITY] => 0 
+		[HCI] => 1 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Identifying Cognitive Authority in Social Networks: a conceptual framework] => Array ( 
+		[COGNITIVE] => 3 
+		[USABILITY] => 0 
+		[HCI] => 0 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Accessibility and affect in technologies for museums: a path towards socio-enactive systems] => Array ( 
+		[COGNITIVE] => 1 
+		[USABILITY] => 0 
+		[HCI] => 2 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[The Interplay of Aesthetics, Usability and Credibility in Mobile Websites and the Moderation by Culture] => Array ( 
+		[COGNITIVE] => 0 
+		[USABILITY] => 3 
+		[HCI] => 1 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Avaliando a notação da MoLICC utilizando o framework Cognitive Dimensions of Notations] => Array ( 
+		[COGNITIVE] => 2 
+		[USABILITY] => 0 
+		[HCI] => 0 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Specification and Evaluation of an Attention-aware Remote Control] => Array ( 
+		[COGNITIVE] => 1 
+		[USABILITY] => 1 
+		[HCI] => 0 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Applying a Multi-Criteria Approach for the Selection of Usability Patterns in the Development of DTV Applications] => Array ( 
+		[COGNITIVE] => 0 
+		[USABILITY] => 3 
+		[HCI] => 1 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+	[Comparação entre os Métodos de Avaliação de Base Cognitiva e Semiótica] => Array ( 
+		[COGNITIVE] => 1 
+		[USABILITY] => 0 
+		[HCI] => 2 
+		[COMPUTING] => 0 
+		[PROGRAMMING] => 0 
+	) 
+)
