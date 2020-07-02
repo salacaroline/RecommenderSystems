@@ -35,6 +35,7 @@ GitHub.sublime-settings
 
 #para ignorar a pasta vendor do elasticsearch
 vendor/
+RS.sublime-project
 
 
 # End of https://www.toptal.com/developers/gitignore/api/sublimetext

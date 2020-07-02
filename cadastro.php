@@ -1,27 +1,26 @@
-
 <?php
 #criar isso no elastic
 
 
-$filename='texto.txt';
+$filename = 'texto.txt';
 $fp = fopen($filename, 'r');
-$perfil=array();
-
+$perfil = array();
 
 // Add each line to an array
-if ($fp) {
-   $array = explode(",", fread($fp, filesize($filename)));
+if ($fp)
+{
+    $array = explode(",", fread($fp, filesize($filename)));
 }
-$k=0;
-for($i=1; $i<11;$i++){
+$k = 0;
+for ($i = 1;$i < 11;$i++)
+{
 
-  $rand_keys = array_rand($array);
+    $rand_keys = array_rand($array);
 
-  $perfil[$k]=$array[$rand_keys];
-  $k++;
+    $perfil[$k] = $array[$rand_keys];
+    $k++;
 
 }
-
 
 ?>
 
@@ -107,53 +106,53 @@ for($i=1; $i<11;$i++){
 
 
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[0];?>"  />
-                    <font color="#000000"><?php echo $perfil[0];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[0]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[0]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[1];?>" />
-                    <font color="#000000"><?php echo $perfil[1];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[1]; ?>" />
+                    <font color="#000000"><?php echo $perfil[1]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[2];?>"  />
-                    <font color="#000000"><?php echo $perfil[2];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[2]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[2]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[3];?>"  />
-                    <font color="#000000"><?php echo $perfil[3];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[3]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[3]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[4];?>"  />
-                    <font color="#000000"><?php echo $perfil[4];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[4]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[4]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[5];?>"  />
-                    <font color="#000000"><?php echo $perfil[5];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[5]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[5]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[6];?>"  />
-                    <font color="#000000"><?php echo $perfil[6];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[6]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[6]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[7];?>"  />
-                    <font color="#000000"><?php echo $perfil[7];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[7]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[7]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[8];?>"  />
-                    <font color="#000000"><?php echo $perfil[8];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[8]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[8]; ?></font>
                     <span></span>
                   </label><br>
                   <label>
-                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[9];?>"  />
-                    <font color="#000000"><?php echo $perfil[9];?></font>
+                    <input type="checkbox" name="fruit[]" value="<?php echo $perfil[9]; ?>"  />
+                    <font color="#000000"><?php echo $perfil[9]; ?></font>
                     <span></span>
                   </label><br>
                   <br />

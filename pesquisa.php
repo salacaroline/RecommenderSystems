@@ -12,10 +12,9 @@
 
 
 <?php
-
 #caminho do arquivo no ubuntu: Computer/usr/share/nginx/html/tcc
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 /*
 session_start();
@@ -30,111 +29,106 @@ $logado = $_SESSION['email'];
 
 */
 
-
-
 require 'vendor/autoload.php';
 
-
 $client = Elasticsearch\ClientBuilder::create()->build();
- // (4)
+// (4)
+if (isset($_GET['q']))
+{
+    $q = $_GET['q'];
+    $params = ['index' => 'artigos', "size" => 5000, 'body' => ["query" => ["simple_query_string" => ["query" => $q,
 
-if(isset($_GET['q'])){
-  $q = $_GET['q'];
-  $params = [
-      'index' => 'artigos',
-      "size"=>5000,
-      'body' => [
-          "query"=> [
-              "simple_query_string" =>[
-                "query" => $q,
+    "fields" => ["paper_title", "paper_abstract_EN", "keyword"], "default_operator" => "or"
 
-                "fields" => ["paper_title", "paper_abstract_EN", "keyword"],
-                "default_operator"=> "or"
+    ]]]];
 
-              ]
-          ]
-      ]
-  ];
+    $results = $client->search($params);
 
-  $results = $client->search($params);
+    // $resultado=json_encode($results);
+    // echo $resultado;
+    
 
+    $filterResult = [];
+    $filterResult2 = [];
 
-  // $resultado=json_encode($results);
-  // echo $resultado;
+    $titleArray = [];
+    $personArray = [];
 
-
-  $filterResult = [];
-  $filterResult2 = [];
-
-  $titleArray = [];
-  $personArray = [];
-
-  foreach ($results['hits']['hits'] as $hit) {
-    if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']])) {
-      $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
-    }
-  }
-
-  foreach ($results['hits']['hits'] as $hit) {
-    foreach ($titleArray as $key => $value) {
-      if ($hit['_source']['paper_title'] == $value['paper_title']) {
-        if (empty($personArray[$hit['_source']['paper_title']])) {
-          $personArray[$hit['_source']['paper_title']] = [];
-          array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
-        } else {
-          for ($i=0; $i < count($personArray[$hit['_source']['paper_title']]); $i++) {
-            if ($personArray[$hit['_source']['paper_title']][$i] != $hit['_source']['person_name'] && !in_array($hit['_source']['person_name'],$personArray[$hit['_source']['paper_title']])) {
-              array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
-              break;
-            }
-          }
+    foreach ($results['hits']['hits'] as $hit)
+    {
+        if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']]))
+        {
+            $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
         }
-      }
     }
-  }
-  echo"<h3>Artigo(s) relacionado(s) à sua pesquisa:</h3>";
-  echo "<br>";
 
-  echo " <a href='home.php' >Home</a> ";
-  echo "<br>";
+    foreach ($results['hits']['hits'] as $hit)
+    {
+        foreach ($titleArray as $key => $value)
+        {
+            if ($hit['_source']['paper_title'] == $value['paper_title'])
+            {
+                if (empty($personArray[$hit['_source']['paper_title']]))
+                {
+                    $personArray[$hit['_source']['paper_title']] = [];
+                    array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
+                }
+                else
+                {
+                    for ($i = 0;$i < count($personArray[$hit['_source']['paper_title']]);$i++)
+                    {
+                        if ($personArray[$hit['_source']['paper_title']][$i] != $hit['_source']['person_name'] && !in_array($hit['_source']['person_name'], $personArray[$hit['_source']['paper_title']]))
+                        {
+                            array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    echo "<h3>Artigo(s) relacionado(s) à sua pesquisa:</h3>";
+    echo "<br>";
 
-  echo "<HR WIDTH=100%>";
+    echo " <a href='home.php' >Home</a> ";
+    echo "<br>";
 
-  foreach ($titleArray as $key => $value) {
-    echo '<div class="card-body">
-        <h5 class="card-title">'.$value['paper_title'].'</h5>
-        <h5 class="card-text">Ano de publicação: '.$value['paper_year'].'</h5>
+    echo "<HR WIDTH=100%>";
+
+    foreach ($titleArray as $key => $value)
+    {
+        echo '<div class="card-body">
+        <h5 class="card-title">' . $value['paper_title'] . '</h5>
+        <h5 class="card-text">Ano de publicação: ' . $value['paper_year'] . '</h5>
         <h5 class="card-title">Autores: </h5>
       </div>
     </div>';
 
-    for ($i=0; $i < count($personArray[$value['paper_title']]); $i++) {
-      echo
-           '
+        for ($i = 0;$i < count($personArray[$value['paper_title']]);$i++)
+        {
+            echo '
              <div class="card-body">
-               <p class="card-title">'.$personArray[$value['paper_title']][$i].'</p>
+               <p class="card-title">' . $personArray[$value['paper_title']][$i] . '</p>
                </div>
 
              </div>
             ';
-    }
-    if($value['paper_year']>='2006'){
+        }
+        if ($value['paper_year'] >= '2006')
+        {
 
-      echo '
+            echo '
       <div class="col-md-8">
       </div>
        <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>
       ';
-    }
-    echo "<HR WIDTH=100%>
+        }
+        echo "<HR WIDTH=100%>
      ";
 
-
-  }
-
+    }
 
 }
-
 
 ?>
 

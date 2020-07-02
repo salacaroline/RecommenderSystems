@@ -7,9 +7,11 @@
 <nav class="navbar border navbar-expand-sm  fixed-top bg-primary navbar-dark ">
   <div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">
-    <img src="#" alt="Sistema de Recomendação para artigos do IHC" style="width:150px;">
+  <a class="navbar-brand" href="">
+    <a alt="Sistema de Recomendação para artigos do IHC" style="width:400px; color: white;">
+    Sistema de Recomendação para artigos do IHC</a>
   </a>
+
    <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>

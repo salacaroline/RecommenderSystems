@@ -14,32 +14,28 @@
       </script>
 
 <?php
-
 #caminho do arquivo no ubuntu: Computer/usr/share/nginx/html/tcc
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
 //echo $login_cookie;
-
 require 'vendor/autoload.php';
 
 $client = Elasticsearch\ClientBuilder::create()->build();
 
-
 //pegar do banco sempre ao inves de trazer do checks
-
-
 
 
 $login_cookie = $_COOKIE['login'];
 //echo $login_cookie;
-if(!empty($_COOKIE['login'])){
+if (!empty($_COOKIE['login']))
+{
 
-      if(isset($login_cookie)){
-        echo"Bem-Vindo(a), $login_cookie".' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a><br>';
-        echo"<h3>Artigos recomendados de acordo com seu perfil:</h3>";
+    if (isset($login_cookie))
+    {
+        echo "Bem-Vindo(a), $login_cookie" . ' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a><br>';
+        echo "<h3>Artigos recomendados de acordo com seu perfil:</h3>";
         echo "<br>";
         echo "<br>";
 
@@ -49,24 +45,23 @@ if(!empty($_COOKIE['login'])){
         echo '<a href="pesquisa.php" class="btn btn-primary">Pesquisar</a> ';
         echo "<br>";
 
+        // }else{
+        //   echo"Bem-Vindo, convidado <br>";
+        //   //echo"<h4>Artigos recomendados de acordo com seu perfil:</h4>;
+        //   echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
+        //
+        //
+        //
+        
+    }
 
-
-      // }else{
-      //   echo"Bem-Vindo, convidado <br>";
-      //   //echo"<h4>Artigos recomendados de acordo com seu perfil:</h4>;
-      //   echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
-      //
-      //
-      //
-     }
-
-
-}else{
-  echo"Bem-Vindo(a), convidado <br>";
-  //echo"Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você";
-  echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
 }
-
+else
+{
+    echo "Bem-Vindo(a), convidado <br>";
+    //echo"Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você";
+    echo "<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
+}
 
 require 'vendor/autoload.php';
 $client = Elasticsearch\ClientBuilder::create()->build();
@@ -74,257 +69,242 @@ $client = Elasticsearch\ClientBuilder::create()->build();
 $like = "";
 $dislike = "";
 
-$params2 = [
-    'index' => 'avaliar',
-    'body' => [
-        "query"=> [
-            "simple_query_string" =>[
-              "query" => $login_cookie,
-              "fields" => ["email"],
-              "default_operator"=> "or"
+$params2 = ['index' => 'avaliar', 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie, "fields" => ["email"], "default_operator" => "or"
 
-            ]
-        ]
-    ]
-];
+]]]];
 
 $results2 = $client->search($params2);
 
+if (!empty($_REQUEST['likes']))
+{
+    $like = urldecode($_REQUEST['likes']);
+}
+else
+{
+    if (!empty($results2['hits']['hits']))
+    {
 
-if (!empty($_REQUEST['likes'])) {
- $like = urldecode($_REQUEST['likes']);
-}else{
-  if (!empty($results2['hits']['hits'])) {
+        foreach ($results2['hits']['hits'] as $hit)
+        {
+            if ($hit['_source']['email'] == $login_cookie)
+            {
+                $like = $hit['_source']['liked_id'];
 
-       foreach ($results2['hits']['hits'] as $hit) {
-         if($hit['_source']['email']==$login_cookie){
-           $like= $hit['_source']['liked_id'];
-
-       }
+            }
+        }
     }
-  }
 
 }
 
-if (!empty($_REQUEST['dislikes'])) {
-  $dislike = urldecode($_REQUEST['dislikes']);
-}else{
-  if (!empty($results2['hits']['hits'])) {
+if (!empty($_REQUEST['dislikes']))
+{
+    $dislike = urldecode($_REQUEST['dislikes']);
+}
+else
+{
+    if (!empty($results2['hits']['hits']))
+    {
 
-       foreach ($results2['hits']['hits'] as $hit) {
-         if($hit['_source']['email']==$login_cookie){
-           $dislike= $hit['_source']['disliked_id'];
-       }
+        foreach ($results2['hits']['hits'] as $hit)
+        {
+            if ($hit['_source']['email'] == $login_cookie)
+            {
+                $dislike = $hit['_source']['disliked_id'];
+            }
+        }
     }
-  }
 
 }
-
-
-
-
 
 // echo $like;
 // echo $dislike;
+$params = ['index' => 'usuarios_', "size" => 5000, 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie,
 
-  $params = [
-      'index' => 'usuarios_',
-      "size"=>5000,
-      'body' => [
-          "query"=> [
-              "simple_query_string" =>[
-                "query" => $login_cookie,
+"fields" => ["email"], "default_operator" => "or"
 
-                "fields" => ["email"],
-                "default_operator"=> "or"
+]]]];
 
-              ]
-          ]
-      ]
-  ];
+$results = $client->search($params);
+$count = 0;
 
-  $results = $client->search($params);
-  $count=0;
+//$resultado=json_encode($results);
+//echo $resultado;
+$perfil_relevante = array();
+if (!empty($results['hits']['hits']))
+{
 
-  //$resultado=json_encode($results);
-  //echo $resultado;
-  $perfil_relevante= array();
-  if (!empty($results['hits']['hits'])) {
+    foreach ($results['hits']['hits'] as $hit)
+    {
+        $perfil_relevante = $hit['_source']['perfil'];
 
-       foreach ($results['hits']['hits'] as $hit) {
-          $perfil_relevante=$hit['_source']['perfil'];
+    }
+}
+$perfil_relevante = explode(",", $perfil_relevante);
+$peso = count($perfil_relevante);
+for ($i = 0;$i < count($perfil_relevante);$i++)
+{
 
-       }
-   }
-   $perfil_relevante=explode(",",$perfil_relevante);
-   $peso=count($perfil_relevante);
-   for($i=0; $i<count($perfil_relevante);$i++){
+    $perfil_relevante[$i] = "(" . $perfil_relevante[$i] . "^" . $peso . ") |";
 
-     $perfil_relevante[$i]="(".$perfil_relevante[$i]."^".$peso.") |";
+    --$peso;
+}
+$perfil_relevante = implode(" ", $perfil_relevante);
 
-     --$peso;
-   }
-   $perfil_relevante=implode(" ", $perfil_relevante);
+$params2 = ['index' => 'artigos', 'size' => 100, 'body' => ["query" => ["simple_query_string" => ["query" => $perfil_relevante, "fields" => ["paper_title", "paper_abstract_EN", "keyword"], "default_operator" => "or"
 
+]]]];
+//
+$results2 = $client->search($params2);
 
+$filterResult = [];
+$contador = 0;
 
-
-
-   $params2 = [
-       'index' => 'artigos',
-       'size'=> 100,
-       'body' => [
-           "query"=> [
-               "simple_query_string" =>[
-                 "query" => $perfil_relevante,
-                 "fields" => ["paper_title", "paper_abstract_EN", "keyword"],
-                 "default_operator"=> "or"
-
-               ]
-           ]
-       ]
-   ];
-  //
-    $results2 = $client->search($params2);
-
-  $filterResult = [];
-  $contador=0;
-
-     // foreach ($results2['hits']['hits'] as $hit) {
-     //   if (!in_array($hit['_source']['paper_title'], $filterResult)) {
-     //     $filterResult[$hit['_source']['paper_title']] = $hit;
-     //   }
-     // }
-     echo '
+// foreach ($results2['hits']['hits'] as $hit) {
+//   if (!in_array($hit['_source']['paper_title'], $filterResult)) {
+//     $filterResult[$hit['_source']['paper_title']] = $hit;
+//   }
+// }
+echo '
 
      <input type="hidden" id="likeArray" value="" name="likeArray">
      <input type="hidden" id="notLikeArray" value="" name="notlikeArray">
      <HR WIDTH=100%>';
-     // if (!empty($filterResult)) {
-     //      foreach ($filterResult as $key => $value) {
-     //        if($count<10){
-     //          echo
-     //               '
-     //                 <div class="card-body">
-     //                 <br>
-     //
-     //                   <h4 class="card-title">'.$value['_source']['paper_title'].'</h4>
-     //                   <p class="card-text">Ano: '.$value['_source']['paper_year'].'</p>
-     //                   <h5></h5>
-     //
-     //                   <div class="col-md-8">
-     //
-     //                     <button type="button" id="like_'.$value['_source']['paper_id'].'" onclick="likeFunction(this)">Curtir</button>
-     //                     <button type="button" id="dislike_'.$value['_source']['paper_id'].'"onclick="dislikeFunction(this)">Descurtir</button>
-     //
-     //
-     //                   </div>
-     //                   <a href="#" class="btn btn-primary">Download</a>
-     //                 </div>
-     //
-     //                 <HR WIDTH=100%>
-     //
-     //                 <HR WIDTH=100%>
-     //               </div>';
-     //               ++$count;
-     //
-     //        }else{
-     //          break;
-     //        }
-     //
-     //
-     //     }
-     // }
-  //
+// if (!empty($filterResult)) {
+//      foreach ($filterResult as $key => $value) {
+//        if($count<10){
+//          echo
+//               '
+//                 <div class="card-body">
+//                 <br>
+//
+//                   <h4 class="card-title">'.$value['_source']['paper_title'].'</h4>
+//                   <p class="card-text">Ano: '.$value['_source']['paper_year'].'</p>
+//                   <h5></h5>
+//
+//                   <div class="col-md-8">
+//
+//                     <button type="button" id="like_'.$value['_source']['paper_id'].'" onclick="likeFunction(this)">Curtir</button>
+//                     <button type="button" id="dislike_'.$value['_source']['paper_id'].'"onclick="dislikeFunction(this)">Descurtir</button>
+//
+//
+//                   </div>
+//                   <a href="#" class="btn btn-primary">Download</a>
+//                 </div>
+//
+//                 <HR WIDTH=100%>
+//
+//                 <HR WIDTH=100%>
+//               </div>';
+//               ++$count;
+//
+//        }else{
+//          break;
+//        }
+//
+//
+//     }
+// }
+//
+$filterResult2 = [];
 
-  $filterResult2 = [];
+$titleArray = [];
+$personArray = [];
 
-  $titleArray = [];
-  $personArray = [];
-
-  $block = "";
-  if (!empty($like) || !empty($dislike) ) {
+$block = "";
+if (!empty($like) || !empty($dislike))
+{
     $block = "disabled";
-  }
+}
 
-  foreach ($results2['hits']['hits'] as $hit) {
-    if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']])) {
-      $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
+foreach ($results2['hits']['hits'] as $hit)
+{
+    if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']]))
+    {
+        $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
     }
-  }
-  foreach ($results2['hits']['hits'] as $hit) {
-    foreach ($titleArray as $key => $value) {
-      if ($hit['_source']['paper_title'] == $value['paper_title']) {
-        if (empty($personArray[$hit['_source']['paper_title']])) {
-          $personArray[$hit['_source']['paper_title']] = [];
-          array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
-        } else {
-          for ($i=0; $i < count($personArray[$hit['_source']['paper_title']]); $i++) {
-            if ($personArray[$hit['_source']['paper_title']][$i] != $hit['_source']['person_name'] && !in_array($hit['_source']['person_name'],$personArray[$hit['_source']['paper_title']])) {
-              array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
-              break;
+}
+foreach ($results2['hits']['hits'] as $hit)
+{
+    foreach ($titleArray as $key => $value)
+    {
+        if ($hit['_source']['paper_title'] == $value['paper_title'])
+        {
+            if (empty($personArray[$hit['_source']['paper_title']]))
+            {
+                $personArray[$hit['_source']['paper_title']] = [];
+                array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
             }
-          }
+            else
+            {
+                for ($i = 0;$i < count($personArray[$hit['_source']['paper_title']]);$i++)
+                {
+                    if ($personArray[$hit['_source']['paper_title']][$i] != $hit['_source']['person_name'] && !in_array($hit['_source']['person_name'], $personArray[$hit['_source']['paper_title']]))
+                    {
+                        array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
+                        break;
+                    }
+                }
+            }
         }
-      }
     }
-  }
+}
 echo '  <div class="col-md-7 control-label">
           <p class="help-block"><h11>*</h11> Não esqueça de enviar sua avaliação dos artigos no final da página! </p><br><br>
         </div>
         </br>
         </br>
         <br><br>';
-  foreach ($titleArray as $key => $value) {
-    if($contador<10){
-          echo '<div class="card-body">
+foreach ($titleArray as $key => $value)
+{
+    if ($contador < 10)
+    {
+        echo '<div class="card-body">
 
-              <h5 class="card-title">Título: '.$value['paper_title'].'</h5>
-              <h5 class="card-text">Ano: '.$value['paper_year'].'</h5>
+              <h5 class="card-title">Título: ' . $value['paper_title'] . '</h5>
+              <h5 class="card-text">Ano: ' . $value['paper_year'] . '</h5>
               <h5 class="card-title">Autores: </h5>
             </div>
           </div>';
-          //if($count<10){
-          for ($i=0; $i < count($personArray[$value['paper_title']]); $i++) {
-            echo
-                 '
+        //if($count<10){
+        for ($i = 0;$i < count($personArray[$value['paper_title']]);$i++)
+        {
+            echo '
                    <div class="card-body">
-                     <p class="card-title">'.$personArray[$value['paper_title']][$i].'</p>
+                     <p class="card-title">' . $personArray[$value['paper_title']][$i] . '</p>
                      </div>
 
                    </div>
                   ';
-          }
+        }
 
-
-          echo '
+        echo '
           <div class="col-md-8">
 
-              <button type="button" '.$block.' id="like_'.$value['paper_id'].'" onclick="likeFunction(this)">Gostei</button>
-              <button type="button" '.$block.' id="dislike_'.$value['paper_id'].'"onclick="dislikeFunction(this)">Não Gostei</button>
+              <button type="button" ' . $block . ' id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
+              <button type="button" ' . $block . ' id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
 
 
             </div><br>';
-          if($value['paper_year']>='2006'){
-            echo'
+        if ($value['paper_year'] >= '2006')
+        {
+            echo '
               <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>';
-          }
-          echo '
+        }
+        echo '
             <HR WIDTH=100%>
           </div>
         ';
         ++$contador;
     }
 
-  }
-
+}
 
 ?>
 
 
     <script>
     var like = "<?php echo $like; ?>";
-    var dislike = "<?php echo $dislike;?>";
+    var dislike = "<?php echo $dislike; ?>";
     //alert(like);
     function loadArrays() {
 

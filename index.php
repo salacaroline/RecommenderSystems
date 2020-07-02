@@ -38,20 +38,11 @@ if(!empty($_COOKIE['login'])){
         echo"Bem-Vindo(a), $login_cookie".' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a><br>';
         echo"<h3>Artigos recomendados de acordo com seu perfil:</h3>";
         echo "<br>";
-
-      // }else{
-      //   echo"Bem-Vindo, convidado <br>";
-      //   //echo"<h4>Artigos recomendados de acordo com seu perfil:</h4>;
-      //   echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
-      //
-      //
-      //
      }
 
 
 }else{
   echo"Bem-Vindo(a), convidado <br>";
-  //echo"Essas informações <font color='red'>NÃO PODEM</font> ser acessadas por você";
   echo"<br><a href='login.php'>Faça Login</a> Para ler o conteúdo";
 }
 
@@ -139,8 +130,6 @@ if (!empty($_REQUEST['dislikes'])) {
          if($hit['_source']['email']==$login_cookie){
            $perfil_relevante=$hit['_source']['perfil'];
          }
-
-
        }
    }
 
@@ -155,17 +144,25 @@ if (!empty($_REQUEST['dislikes'])) {
    echo '<a href="pesquisa.php" class="btn btn-primary">Pesquisar</a> ';
    echo "<br>";
    
-   //monta a string com os termos do perfil e a prioridade
-   $perfil_relevante=explode(",",$perfil_relevante);
-   $words = $perfil_relevante;
-   $peso=count($perfil_relevante);
-   for($i=0; $i<count($perfil_relevante);$i++){
+  $perfil_relevante=explode(",",$perfil_relevante);
+  $words = $perfil_relevante;
 
-     $perfil_relevante[$i]="(".$perfil_relevante[$i]."^".$peso.") |";
+  //monta a string com os termos do perfil e a prioridade
+  function stringPrioridade($perfil_relevante){
+      $peso=count($perfil_relevante);
+      for($i=0; $i<count($perfil_relevante);$i++){
 
-     --$peso;
-   }
-   $perfil_relevante=implode(" ", $perfil_relevante);
+        $perfil_relevante[$i]="(".$perfil_relevante[$i]."^".$peso.") |";
+
+        --$peso;
+      }
+      $perfil_relevante=implode(" ", $perfil_relevante);
+
+      return $perfil_relevante;
+  }
+
+  $perfil_relevante =  stringPrioridade($perfil_relevante);
+   
 
    //parâmetros para o ES
    $params2 = [
@@ -184,108 +181,78 @@ if (!empty($_REQUEST['dislikes'])) {
   
   $results2 = $client->search($params2);
 
-  //imprimir a resposta inteira
-  //print_r($results2);
-
-  $filterResult = [];
   $contador=0;
 
-     // foreach ($results2['hits']['hits'] as $hit) {
-     //   if (!in_array($hit['_source']['paper_title'], $filterResult)) {
-     //     $filterResult[$hit['_source']['paper_title']] = $hit;
-     //   }
-     // }
      echo '
 
      <input type="hidden" id="likeArray" value="" name="likeArray">
      <input type="hidden" id="notLikeArray" value="" name="notlikeArray">
      <HR WIDTH=100%>';
-     // if (!empty($filterResult)) {
-     //      foreach ($filterResult as $key => $value) {
-     //        if($count<10){
-     //          echo
-     //               '
-     //                 <div class="card-body">
-     //                 <br>
-     //
-     //                   <h4 class="card-title">'.$value['_source']['paper_title'].'</h4>
-     //                   <p class="card-text">Ano: '.$value['_source']['paper_year'].'</p>
-     //                   <h5></h5>
-     //
-     //                   <div class="col-md-8">
-     //
-     //                     <button type="button" id="like_'.$value['_source']['paper_id'].'" onclick="likeFunction(this)">Curtir</button>
-     //                     <button type="button" id="dislike_'.$value['_source']['paper_id'].'"onclick="dislikeFunction(this)">Descurtir</button>
-     //
-     //
-     //                   </div>
-     //                   <a href="#" class="btn btn-primary">Download</a>
-     //                 </div>
-     //
-     //                 <HR WIDTH=100%>
-     //
-     //                 <HR WIDTH=100%>
-     //               </div>';
-     //               ++$count;
-     //
-     //        }else{
-     //          break;
-     //        }
-     //
-     //
-     //     }
-     // }
-  //
-
-  $filterResult2 = [];
 
   $titleArray = [];
   $personArray = [];
-  $idEsArray = [];
+  $idEsArray = []; // indexa titulo por id do ES
+  
 
   $block = "";
   if (!empty($like) || !empty($dislike) ) {
     $block = "disabled";
   }
+
   //indexa resutados pelo título do arquivo
-  foreach ($results2['hits']['hits'] as $hit) {
-    if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']])) {
-      $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
-      $idEsArray[$hit['_source']['paper_title']] = $hit['_id'];
+  function getPerTitle($results2, &$titleArray, &$idEsArray){
+    foreach ($results2['hits']['hits'] as $hit) {
+      if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']])) {
+        $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
+        $idEsArray[$hit['_source']['paper_title']] = $hit['_id'];
+      }
     }
   }
-  //obtem todos os autores do artigo em um outro array
-  foreach ($results2['hits']['hits'] as $hit) {
-    foreach ($titleArray as $key => $value) {
-      if ($hit['_source']['paper_title'] == $value['paper_title']) {
-        if (empty($personArray[$hit['_source']['paper_title']])) {
-          $personArray[$hit['_source']['paper_title']] = [];
-          array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
-        } else {
-          for ($i=0; $i < count($personArray[$hit['_source']['paper_title']]); $i++) {
-            if ($personArray[$hit['_source']['paper_title']][$i] != $hit['_source']['person_name'] && !in_array($hit['_source']['person_name'],$personArray[$hit['_source']['paper_title']])) {
-              array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
-              break;
+  getPerTitle($results2, $titleArray, $idEsArray);
+
+  /*obtem todos os autores do artigo em um outro array*/
+  function getPerson($results2, $titleArray, &$personArray){
+    foreach ($results2['hits']['hits'] as $hit) {
+      foreach ($titleArray as $key => $value) {
+        if ($hit['_source']['paper_title'] == $value['paper_title']) {
+          if (empty($personArray[$hit['_source']['paper_title']])) {
+            $personArray[$hit['_source']['paper_title']] = [];
+            array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
+          } else {
+            for ($i=0; $i < count($personArray[$hit['_source']['paper_title']]); $i++) {
+              if ($personArray[$hit['_source']['paper_title']][$i] != $hit['_source']['person_name'] && !in_array($hit['_source']['person_name'],$personArray[$hit['_source']['paper_title']])) {
+                array_push($personArray[$hit['_source']['paper_title']], $hit['_source']['person_name']);
+                break;
+              }
             }
           }
         }
       }
     }
   }
-  
-  //cria a matriz de resultados por palavras
-  for ($i=0; $i < count($words); $i++) { 
-    $resultsPerWord[$words[$i]] = 0;   
+  getPerson($results2, $titleArray, $personArray);
+
+  /*
+  PÓS-FILTRO
+  */
+  // echo "Quantidade de artigos encontrados: ";
+  // print_r(sizeof($idEsArray));
+  // echo "<br><br>";
+
+  /*cria a matriz de resultadosxpalavras e artigosxpalavras*/
+  foreach ($idEsArray as $key => $value) {
+    for ($i=0; $i < count($words); $i++) { 
+      $resultsPerWord[$words[$i]] = 0; //Quantas vezes as palavras aparecem no total       
+      $countCriticalWord[$words[$i]] = 0; //Indexa as palavras que aparecem só uma vez   
+      $articlePerWord[$key][$words[$i]] = 0; //Indexa quantas palavras por artigo no total
+    }
   }
 
-  echo "Matriz inicial: <br>";
-  print_r($resultsPerWord);
-  echo "<br><br><br><br>";
-
-  
+  $arrayAuxiliar = [];
   $caracteres = array("(", ")", ":");
-  //Inicio: Pós-filtro proposto
-  //Para cada artigo dos resultados fazer explain
+  
+
+  /*Para cada artigo dos resultados fazer explain*/
   foreach ($idEsArray as $key => $value) {
 
     $params3 = [
@@ -303,26 +270,85 @@ if (!empty($_REQUEST['dislikes'])) {
        ];
       
     $results3 = $client->explain($params3);
-    foreach ($results3['explanation']['details'] as $word) {
-
-        echo "word: <br>";
-        print_r($word);
-        echo "<br><br><br><br>";    
-        // foreach ($word['details'] as $key => $value) {
-        //   $aux = explode(" ", str_replace($caracteres, " ", strtoupper($value['description'])));
-        //   $resultsPerWord[$aux[2]] ++;
-        // }
+    foreach ($results3['explanation']['details'] as $word) {         
+        foreach ($word['details'] as $key2 => $value) {
+          /*Trata os resultados para obter a informação desejada*/
+          $aux = explode(" ", str_replace($caracteres, " ", strtoupper($value['description'])));
+          $articlePerWord[$key][$aux[2]] ++; 
+          $resultsPerWord[$aux[2]]++; 
+        }
     }  
+  }
+echo "resultsPerWord: <br>";
+print_r($resultsPerWord);
+echo "<br><br><br><br>"; 
+
+/*Lógica para criar perfil invertido*/
+$missWord = false;
+$inverseWords = [];
+for ($i=count($words)-1; $i >= 0; $i--) { 
+  if($resultsPerWord[$words[$i]] === 0){
+    $missWord = true;
+  }
+  array_push($inverseWords, $words[$i]);
+}
+
+/*Lógica pra verificar se alguma palavra apareceu em somente um artigo */
+$j = 0;
+foreach ($idEsArray as $key => $value) {
+  if($j === 10){
     break;
   }
+  for ($i=0; $i < count($words); $i++) { 
+    if($articlePerWord[$key][$words[$i]] > 0 ){
+      if($countCriticalWord[$words[$i]] === 0){
+        $countCriticalWord[$words[$i]] = 1;
+        $criticalArticle[$words[$i]] = $key;
+      } else if($countCriticalWord[$words[$i]] > 0){
+        $countCriticalWord[$words[$i]] = 2;
+        unset($criticalArticle[$words[$i]]);
+      }
+    }
+  }
+  $j++;
+}
 
+echo "countCriticalWord: <br>";
+print_r($countCriticalWord);
+echo "<br><br><br><br>"; 
+
+echo "countCriticalWord: <br>";
+print_r($criticalArticle);
+echo "<br><br><br><br>"; 
+
+
+$titleArray2 = [];
+$personArray2 = [];
+$idEsArray2 = [];
+
+if($missWord){
+  $inverseWords = stringPrioridade($inverseWords);
   
+  $params2 = [
+       'index' => 'artigos',
+       'size'=> 10,
+       'body' => [
+           "query"=> [
+               "query_string" =>[
+                 "query" => $inverseWords,
+                 "fields" => ["paper_title", "paper_abstract_EN", "keyword"],
+                 "default_operator"=> "or"
+               ]
+           ]
+       ]
+   ];
+  
+  $results2 = $client->search($params2);
+  getPerTitle($results2, $titleArray2, $idEsArray2);
+  getPerson($results2, $titleArray2, $personArray2);
 
-
-
-
-
-
+}
+  
 
 echo '  <div class="col-md-7 control-label">
           <p class="help-block"><h11>*</h11> Não esqueça de enviar sua avaliação dos artigos no final da página! </p><br><br>
@@ -330,6 +356,8 @@ echo '  <div class="col-md-7 control-label">
         </br>
         </br>
         <br><br>';
+
+  //TO DO: verificar antes de substituir a ultima posição
   foreach ($titleArray as $key => $value) {
     if($contador<10){
           echo '<div class="card-body">
@@ -372,6 +400,45 @@ echo '  <div class="col-md-7 control-label">
     }
 
   }
+
+  foreach ($titleArray2 as $key => $value) {
+              echo '<div class="card-body">
+
+              <h5 class="card-title">Título: '.$value['paper_title'].'</h5>
+              <h5 class="card-text">Ano: '.$value['paper_year'].'</h5>
+              <h5 class="card-title">Autores: </h5>
+            </div>
+          </div>';
+          //if($count<10){
+          for ($i=0; $i < count($personArray2[$value['paper_title']]); $i++) {
+            echo
+                 '
+                   <div class="card-body">
+                     <p class="card-title">'.$personArray2[$value['paper_title']][$i].'</p>
+                     </div>
+
+                   </div>
+                  ';
+          }
+
+
+          echo '
+          <div class="col-md-8">
+
+              <button type="button" '.$block.' id="like_'.$value['paper_id'].'" onclick="likeFunction(this)">Gostei</button>
+              <button type="button" '.$block.' id="dislike_'.$value['paper_id'].'"onclick="dislikeFunction(this)">Não Gostei</button>
+
+
+            </div><br>';
+          if($value['paper_year']>='2006'){
+            echo'
+              <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>';
+          }
+          echo '
+            <HR WIDTH=100%>
+          </div>
+        ';    
+}
 
 
 ?>
