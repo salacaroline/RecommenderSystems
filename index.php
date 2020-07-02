@@ -175,7 +175,7 @@ if (!empty($_REQUEST['dislikes'])) {
    //parâmetros para o ES
    $params2 = [
        'index' => 'artigos',
-       'size'=> 80,
+       'size'=> 100,
        'body' => [
            "query"=> [
                "query_string" =>[
@@ -189,7 +189,7 @@ if (!empty($_REQUEST['dislikes'])) {
   
   $results2 = $client->search($params2);
 
-  $contador=0;
+ 
 
      echo '
 
@@ -287,6 +287,11 @@ if (!empty($_REQUEST['dislikes'])) {
         }
     }  
   }
+
+echo "articlePerWord: <br>";
+print_r($articlePerWord);
+echo "<br><br><br><br>";
+
 echo "resultsPerWord: <br>";
 print_r($resultsPerWord);
 echo "<br><br><br><br>"; 
@@ -364,10 +369,73 @@ echo '  <div class="col-md-7 control-label">
         </br>
         </br>
         <br><br>';
-
+$contador=0;
   //TO DO: verificar antes de substituir a ultima posição
+foreach ($titleArray as $key => $value) {
+  if($contador<10){
+        echo '<div class="card-body">
+
+            <h5 class="card-title">Título: '.$value['paper_title'].'</h5>
+            <h5 class="card-text">Ano: '.$value['paper_year'].'</h5>
+            <h5 class="card-title">Autores: </h5>
+          </div>
+        </div>';
+        //if($count<10){
+        for ($i=0; $i < count($personArray[$value['paper_title']]); $i++) {
+          echo
+               '
+                 <div class="card-body">
+                   <p class="card-title">'.$personArray[$value['paper_title']][$i].'</p>
+                   </div>
+
+                 </div>
+                ';
+        }
+
+
+        echo '
+        <div class="col-md-8">
+
+            <button type="button" '.$block.' id="like_'.$value['paper_id'].'" onclick="likeFunction(this)">Gostei</button>
+            <button type="button" '.$block.' id="dislike_'.$value['paper_id'].'"onclick="dislikeFunction(this)">Não Gostei</button>
+
+
+          </div><br>';
+        if($value['paper_year']>='2006'){
+          echo'
+            <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>';
+        }
+        echo '
+          <HR WIDTH=100%>
+        </div>
+      ';
+      ++$contador;
+  }
+
+}
+
+echo '
+          <HR WIDTH=100%>
+          <HR WIDTH=100%>
+          <HR WIDTH=100%>
+      ';
+$contador=1;
+if($missWord){
+  $nCriticalWord = 0;
+  for ($i=0; $i < count($words); $i++) { 
+    if($countCriticalWord[$words[$i]] === 1){
+      ++$nCriticalWord;
+    }
+  }
+  echo "<br>nCriticalWord: <br>";
+  print_r($nCriticalWord);
+  echo "<br><br><br><br>"; 
   foreach ($titleArray as $key => $value) {
-    if($contador<10){
+
+    if($contador<=10){
+        if($contador === 10-$nCriticalWord){
+          continue;
+        }else{
           echo '<div class="card-body">
 
               <h5 class="card-title">Título: '.$value['paper_title'].'</h5>
@@ -387,7 +455,6 @@ echo '  <div class="col-md-7 control-label">
                   ';
           }
 
-
           echo '
           <div class="col-md-8">
 
@@ -403,13 +470,18 @@ echo '  <div class="col-md-7 control-label">
           echo '
             <HR WIDTH=100%>
           </div>
-        ';
-        ++$contador;
+          ';    
+        }
     }
-
+    $contador++;
   }
 
+
+  $contador2 = 0;
   foreach ($titleArray2 as $key => $value) {
+    if($contador2 === 1){
+      break;
+    }
               echo '<div class="card-body">
 
               <h5 class="card-title">Título: '.$value['paper_title'].'</h5>
@@ -446,6 +518,8 @@ echo '  <div class="col-md-7 control-label">
             <HR WIDTH=100%>
           </div>
         ';    
+  $contador2++;
+  }
 }
 
 
