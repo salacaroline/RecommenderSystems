@@ -1,4 +1,12 @@
+<?php
+session_start();
+if((isset ($_SESSION['login']) == true) and (isset ($_SESSION['senha']) == true))
+{
+  header('Location: index.php');
+}
 
+
+?>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

@@ -18,6 +18,13 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+session_start();
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['login']);
+  unset($_SESSION['senha']);
+  header('Location: home.php');
+}
 
 //echo $login_cookie;
 require 'vendor/autoload.php';
@@ -27,9 +34,9 @@ $client = Elasticsearch\ClientBuilder::create()->build();
 //pegar do banco sempre ao inves de trazer do checks
 
 
-$login_cookie = $_COOKIE['login'];
+$login_cookie = $_SESSION['login'];
 //echo $login_cookie;
-if (!empty($_COOKIE['login']))
+if (!empty($_SESSION['login']))
 {
 
     if (isset($login_cookie))

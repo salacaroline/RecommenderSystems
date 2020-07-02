@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
   $likes =  urldecode($_REQUEST['like']);
   $dislikes =  urldecode($_REQUEST['dislike']);
   // //4067;1,4068;2,
@@ -17,7 +17,7 @@
   $insere_dislike=[];
 
   //echo
-$email=$_COOKIE['login'];
+$email=$_SESSION['login']);
 //echo $likes;
 
 

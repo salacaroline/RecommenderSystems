@@ -1,10 +1,15 @@
 <?php
 require 'vendor/autoload.php';
-
+session_start();
 $client = Elasticsearch\ClientBuilder::create()->build();
 // (4)
 $login = $_GET['email'];
 $senha = $_GET['senha'];
+
+if($login === null and $senha === null){
+    $login = $_SESSION['login'];
+    $senha = $_SESSION['senha'];
+}
 
 #"(IMML)^2 | computer | interaction"
 $params = ['index' => 'usuarios_', 'body' => ["query" => ["simple_query_string" => ["query" => $login, "fields" => ["email"], "default_operator" => "or"
@@ -20,14 +25,15 @@ if (!empty($results['hits']['hits']))
         if ($hit['_source']['senha'] == $senha)
         {
 
-            setcookie("login", $login);
+            $_SESSION['login'] = $login;
+            $_SESSION['senha'] = $senha;
             header("Location:index.php");
         }
         else
         {
             echo "<script language='javascript' type='text/javascript'>
                   alert('Login e/ou senha incorretos!');window.location
-                  .href='/tcc/login.php';</script>";
+                  .href='/login.php';</script>";
         }
 
     }
@@ -37,7 +43,7 @@ else
 
     echo "<script language='javascript' type='text/javascript'>
             alert('Login e/ou senha incorretos!');window.location
-            .href='/tcc/login.php';</script>";
+            .href='/login.php';</script>";
     die();
 }
 

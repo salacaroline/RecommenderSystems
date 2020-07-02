@@ -16,6 +16,13 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+session_start();
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['login']);
+  unset($_SESSION['senha']);
+  header('Location: home.php');
+}
 /*
 session_start();
 if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['senha']) == true))

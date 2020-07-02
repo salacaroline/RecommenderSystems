@@ -18,6 +18,14 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 
 
+session_start();
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['login']);
+  unset($_SESSION['senha']);
+  header('Location: home.php');
+}
+
 //echo $login_cookie;
 
 require 'vendor/autoload.php';
@@ -30,9 +38,9 @@ $client = Elasticsearch\ClientBuilder::create()->build();
 
 
 
-$login_cookie = $_COOKIE['login'];
+$login_cookie = $_SESSION['login'];
 //echo $login_cookie;
-if(!empty($_COOKIE['login'])){
+if(!empty($_SESSION['login'])){
 
       if(isset($login_cookie)){
         echo"Bem-Vindo(a), $login_cookie".' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a><br>';
@@ -317,7 +325,7 @@ echo "countCriticalWord: <br>";
 print_r($countCriticalWord);
 echo "<br><br><br><br>"; 
 
-echo "countCriticalWord: <br>";
+echo "criticalArticle: <br>";
 print_r($criticalArticle);
 echo "<br><br><br><br>"; 
 
