@@ -305,6 +305,7 @@ foreach ($idEsArray as $key => $value)
     {
         if ($articlePerWord[$key][$words[$i]] > 0)
         {
+            //reveer lógica
             if ($countCriticalWord[$words[$i]] === 0)
             {
                 $countCriticalWord[$words[$i]] = 1;
