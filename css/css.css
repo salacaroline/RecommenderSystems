@@ -1,6 +1,9 @@
 h11 {
     color:red;
 }
+body {
+    margin: 1em;
+}
 
 #logo {
         width:50%;
