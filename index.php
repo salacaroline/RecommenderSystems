@@ -367,17 +367,20 @@ foreach ($titleArray as $key => $value)
             <h5 class="card-title">Autores: </h5>
             
         ';
-        //if($count<10){
+        echo '
+               <div class="card-body">
+                 <p class="card-title">';
         for ($i = 0;$i < count($personArray[$value['paper_title']]);$i++)
         {
-            echo '
-                 <div class="card-body">
-                   <p class="card-title">' . $personArray[$value['paper_title']][$i] . '</p>
-                 </div>
-
-                 
-                ';
+            
+            if($i == count($personArray[$value['paper_title']]) - 1){
+                echo ''.$personArray[$value['paper_title']][$i].' ';
+            }else{
+                echo ''.$personArray[$value['paper_title']][$i].', ';
+            }
         }
+        echo '</p>
+           </div>';
 
         echo '
         <div class="row">
@@ -459,17 +462,20 @@ if ($missWord)
           <h5 class="card-title">Autores: </h5>
           
       ';
-            //if($count<10){
+            echo '
+               <div class="card-body">
+                 <p class="card-title">';
             for ($i = 0;$i < count($personArray[$value['paper_title']]);$i++)
             {
-                echo '
-               <div class="card-body">
-                 <p class="card-title">' . $personArray[$value['paper_title']][$i] . '</p>
-               </div>
-
-              
-              ';
+                
+                if($i == count($personArray[$value['paper_title']]) - 1){
+                    echo ''.$personArray[$value['paper_title']][$i].' ';
+                }else{
+                    echo ''.$personArray[$value['paper_title']][$i].', ';
+                }
             }
+            echo '</p>
+               </div>';
 
             echo '
           <div class="row">
@@ -511,17 +517,23 @@ if ($missWord)
               <h5 class="card-title">Autores: </h5>
             
          ';
-        //if($count<10){
-        for ($i = 0;$i < count($personArray2[$value['paper_title']]);$i++)
-        {
-            echo '
-                   <div class="card-body">
-                     <p class="card-title">' . $personArray2[$value['paper_title']][$i] . '</p>
-                   </div>
+        
+             echo '
+               <div class="card-body">
+                 <p class="card-title">';
+            for ($i = 0;$i < count($personArray2[$value['paper_title']]);$i++)
+            {
+                
+                if($i == count($personArray2[$value['paper_title']]) - 1){
+                    echo ''.$personArray2[$value['paper_title']][$i].' ';
+                }else{
+                    echo ''.$personArray2[$value['paper_title']][$i].', ';
+                }
+            }
+            echo '</p>
+               </div>';
 
-                   
-                  ';
-        }
+        
 
         echo '
           <div class="row">
