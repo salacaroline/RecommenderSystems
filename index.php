@@ -163,7 +163,7 @@ function stringPrioridade($perfil_relevante)
 $perfil_relevante = stringPrioridade($perfil_relevante);
 
 //parâmetros para o ES
-$params2 = ['index' => 'artigos', 'size' => 100, 'body' => ["query" => ["query_string" => ["query" => $perfil_relevante, "fields" => ["paper_title", "paper_abstract_EN", "keyword"], "default_operator" => "or"]]]];
+$params2 = ['index' => 'artigos', 'size' => 150, 'body' => ["query" => ["query_string" => ["query" => $perfil_relevante, "fields" => ["paper_title", "paper_abstract_EN", "keyword"], "default_operator" => "or"]]]];
 
 $results2 = $client->search($params2);
 
@@ -192,7 +192,7 @@ function getPerTitle($results2, &$titleArray, &$idEsArray)
         if (empty($titleArray[$hit['_source']['paper_title']]) || !in_array($hit['_source']['paper_title'], $titleArray[$hit['_source']['paper_title']]))
         {
             $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
-            $idEsArray[$hit['_source']['paper_title']] = $hit['_id'];
+            $idEsArray[$hit['_source']['paper_title']] = $hit['_id']; //utilizado para fazer o explain
         }
     }
 }
@@ -232,9 +232,9 @@ getPerson($results2, $titleArray, $personArray);
 /*
   PÓS-FILTRO
 */
-// echo "Quantidade de artigos encontrados: ";
-// print_r(sizeof($idEsArray));
-// echo "<br><br>";
+echo "Quantidade de artigos encontrados: ";
+print_r(sizeof($idEsArray));
+echo "<br><br>";
 /*cria a matriz de resultadosxpalavras e artigosxpalavras*/
 foreach ($idEsArray as $key => $value)
 {
@@ -272,6 +272,9 @@ foreach ($idEsArray as $key => $value)
         }
     }
 }
+// echo "titleArray: <br>";
+// print_r($titleArray);
+// echo "<br><br><br><br>";
 
 echo "articlePerWord: <br>";
 print_r($articlePerWord);
@@ -309,7 +312,7 @@ foreach ($idEsArray as $key => $value)
             if ($countCriticalWord[$words[$i]] === 0)
             {
                 $countCriticalWord[$words[$i]] = 1;
-                $criticalArticle[$words[$i]] = $key;
+                $criticalArticle[$words[$i]] = $key; 
             }
             else if ($countCriticalWord[$words[$i]] > 0)
             {
@@ -322,11 +325,11 @@ foreach ($idEsArray as $key => $value)
 }
 
 echo "countCriticalWord: <br>";
-print_r($countCriticalWord);
+print_r($countCriticalWord);//Se 1 essa palavra só existe nesse arquivo
 echo "<br><br>";
 
 echo "criticalArticle: <br>";
-print_r($criticalArticle);
+print_r($criticalArticle); //Armazena a palavra e o artigo (título)
 echo "<br><br>";
 
 $titleArray2 = [];
@@ -411,11 +414,33 @@ if ($missWord)
     $nCriticalWord = 0;
     for ($i = 0;$i < count($words);$i++)
     {
-        if ($countCriticalWord[$words[$i]] === 0)
+        if ($countCriticalWord[$words[$i]] === 1)
         {
             ++$nCriticalWord;
         }
     }
+    if($nCriticalWord > 0)
+    {
+        $titleArrayReversed = array_reverse($titleArray);
+        
+        foreach ($titleArrayReversed as $key => $value)
+        {
+            $flag = false; 
+            foreach ($criticalArticle as $key2 => $value2) 
+            {
+                if($value['paper_title'] === $value2)
+                {
+                    $flag = true;
+                }   
+            }
+            if(!$flag)
+            {
+                unset($titleArray[$key]);
+                break;
+            }
+        }    
+    }
+    
     //echo "<br>nCriticalWord: <br>";
     //print_r($nCriticalWord);
     //echo "<br><br><br><br>";
@@ -423,58 +448,51 @@ if ($missWord)
     foreach ($titleArray as $key => $value)
     {
 
-        if ($contador <= 10)
+        if ($contador < 10)
         {
-            if ($contador === 10 - $nCriticalWord)
-            {
-              $contador++;
-                continue;
-            }
-            else
-            {
-                echo '
-              
-             
-              <h5 class="card-title">Título: ' . $value['paper_title'] . '</h5>
-              <h5 class="card-text">Ano: ' . $value['paper_year'] . '</h5>
-              <h5 class="card-title">Autores: </h5>
-              
-          ';
-                //if($count<10){
-                for ($i = 0;$i < count($personArray[$value['paper_title']]);$i++)
-                {
-                    echo '
-                   <div class="card-body">
-                     <p class="card-title">' . $personArray[$value['paper_title']][$i] . '</p>
-                   </div>
-
-                  
-                  ';
-                }
-
-                echo '
-              <div class="row">
-              <div class="col-md-5">
-              <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
-              <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
-              </div>';
-
-                if ($value['paper_year'] >= '2006')
-                {
-                    echo '
-              <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>
-              </div>';
-                }else{
-                  echo '
-                    <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary" disabled>Acesso</a>
-
-                </div>';
-                }
-                echo '
-            <HR WIDTH=100%>
+           
+            echo '
           
-          ';
+         
+          <h5 class="card-title">Título: ' . $value['paper_title'] . '</h5>
+          <h5 class="card-text">Ano: ' . $value['paper_year'] . '</h5>
+          <h5 class="card-title">Autores: </h5>
+          
+      ';
+            //if($count<10){
+            for ($i = 0;$i < count($personArray[$value['paper_title']]);$i++)
+            {
+                echo '
+               <div class="card-body">
+                 <p class="card-title">' . $personArray[$value['paper_title']][$i] . '</p>
+               </div>
+
+              
+              ';
             }
+
+            echo '
+          <div class="row">
+          <div class="col-md-5">
+          <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
+          <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
+          </div>';
+
+            if ($value['paper_year'] >= '2006')
+            {
+                echo '
+          <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>
+          </div>';
+            }else{
+              echo '
+                <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary" disabled>Acesso</a>
+
+            </div>';
+            }
+            echo '
+        <HR WIDTH=100%>
+      
+      ';    
         }
         $contador++;
     }
