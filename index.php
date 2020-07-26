@@ -167,6 +167,10 @@ $params2 = ['index' => 'artigos', 'size' => 150, 'body' => ["query" => ["query_s
 
 $results2 = $client->search($params2);
 
+// echo "results2: <br>";
+// print_r($results2);
+// echo "<br><br><br><br>";
+
 echo '
 
      <input type="hidden" id="likeArray" value="" name="likeArray">
@@ -176,6 +180,7 @@ echo '
 $titleArray = [];
 $personArray = [];
 $idEsArray = []; // indexa titulo por id do ES
+$scoreArray = []; // score indexado pelo título
 
 
 $block = "";
@@ -185,7 +190,7 @@ if (!empty($like) || !empty($dislike))
 }
 
 //indexa resutados pelo título do arquivo
-function getPerTitle($results2, &$titleArray, &$idEsArray)
+function getPerTitle($results2, &$titleArray, &$idEsArray, &$scoreArray )
 {
     foreach ($results2['hits']['hits'] as $hit)
     {
@@ -193,10 +198,15 @@ function getPerTitle($results2, &$titleArray, &$idEsArray)
         {
             $titleArray[$hit['_source']['paper_title']] = $hit['_source'];
             $idEsArray[$hit['_source']['paper_title']] = $hit['_id']; //utilizado para fazer o explain
+            $scoreArray[$hit['_source']['paper_title']] = $hit['_score']; //utilizado para análise posterior
         }
     }
 }
-getPerTitle($results2, $titleArray, $idEsArray);
+getPerTitle($results2, $titleArray, $idEsArray, $scoreArray);
+
+echo "scoreArray: <br>'";
+print_r($scoreArray);
+echo "<br><br><br><br>";
 
 /*obtem todos os autores do artigo em um outro array*/
 function getPerson($results2, $titleArray, &$personArray)
@@ -255,9 +265,12 @@ $caracteres = array(
 );
 
 /*Para cada artigo dos resultados fazer explain*/
+$contador = 0;
 foreach ($idEsArray as $key => $value)
 {
-
+    if($contador == 10){
+        break;
+    }
     $params3 = ['id' => $value, 'index' => 'artigos', 'body' => ["query" => ["query_string" => ["query" => $perfil_relevante, "fields" => ["paper_title", "paper_abstract_EN", "keyword"], "default_operator" => "or"]]]];
 
     $results3 = $client->explain($params3);
@@ -271,10 +284,11 @@ foreach ($idEsArray as $key => $value)
             $resultsPerWord[$aux[2]]++;
         }
     }
+    $contador++;
 }
-// echo "titleArray: <br>";
-// print_r($titleArray);
-// echo "<br><br><br><br>";
+echo "titleArray: <br>";
+print_r($titleArray);
+echo "<br><br><br><br>";
 
 echo "articlePerWord: <br>";
 print_r($articlePerWord);
@@ -309,7 +323,7 @@ foreach ($idEsArray as $key => $value)
         if ($articlePerWord[$key][$words[$i]] > 0)
         {
             //reveer lógica
-            if ($countCriticalWord[$words[$i]] === 0)
+            if ($countCriticalWord[$words[$i]] == 0)
             {
                 $countCriticalWord[$words[$i]] = 1;
                 $criticalArticle[$words[$i]] = $key; 
@@ -335,6 +349,12 @@ echo "<br><br>";
 $titleArray2 = [];
 $personArray2 = [];
 $idEsArray2 = [];
+$scoreArray2 = [];
+$scoreRetired = [];
+
+echo "missWord: <br>";
+echo ($missWord ? "true" : "false");
+echo "<br><br>";
 
 if ($missWord)
 {
@@ -343,8 +363,11 @@ if ($missWord)
     $params2 = ['index' => 'artigos', 'size' => 10, 'body' => ["query" => ["query_string" => ["query" => $inverseWords, "fields" => ["paper_title", "paper_abstract_EN", "keyword"], "default_operator" => "or"]]]];
 
     $results2 = $client->search($params2);
-    getPerTitle($results2, $titleArray2, $idEsArray2);
+    getPerTitle($results2, $titleArray2, $idEsArray2, $scoreArray2);
     getPerson($results2, $titleArray2, $personArray2);
+    echo "scoreArray2: <br>";
+    print_r($scoreArray2);
+    echo "<br><br>";
 
 }
 
@@ -357,6 +380,8 @@ echo '  <div class="col-md-7 control-label">
 $contador = 0;
 echo '<div class="row">';
 echo '<div class="col-md-6">';
+
+/*Primeira coluna de resultados do algoritmo baseline*/
 foreach ($titleArray as $key => $value)
 {
     if ($contador < 10)
@@ -439,14 +464,13 @@ if ($missWord)
             if(!$flag)
             {
                 unset($titleArray[$key]);
+                /*para análises*/
+                $scoreRetired[$value['paper_title']] = $scoreArray[$value['paper_title']];
                 break;
             }
         }    
     }
-    
-    //echo "<br>nCriticalWord: <br>";
-    //print_r($nCriticalWord);
-    //echo "<br><br><br><br>";
+
     echo '<div class="col-md-6">';
     foreach ($titleArray as $key => $value)
     {
@@ -499,9 +523,14 @@ if ($missWord)
         <HR WIDTH=100%>
       
       ';    
+        }else if($contador == 10 && empty($scoreRetired))
+        {
+            /*para analises*/
+            $scoreRetired[$value['paper_title']] = $scoreArray[$value['paper_title']];
         }
         $contador++;
     }
+
 
     $contador2 = 0;
     foreach ($titleArray2 as $key => $value)
@@ -559,6 +588,14 @@ if ($missWord)
         $contador2++;
     }
     echo '</div>';
+
+    echo "<br>nCriticalWord: <br>";
+    print_r($nCriticalWord);
+    echo "<br><br><br><br>";
+
+    echo "scoreRetired: <br>";
+    print_r($scoreRetired);
+    echo "<br><br>";
 }
 echo '</div>';
 
