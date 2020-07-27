@@ -4,12 +4,8 @@
         <title>Recomendação</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="stylesheet" type="text/css" href="css/css.css">
-
-
     </head>
-
     <body>
-
 <?php
 #caminho do arquivo no ubuntu: Computer/usr/share/nginx/html/tcc
 ini_set('display_errors', 1);
@@ -31,19 +27,16 @@ $client = Elasticsearch\ClientBuilder::create()->build();
 
 //pegar do banco sempre ao inves de trazer do checks
 
-
 $login_cookie = $_SESSION['login'];
 //echo $login_cookie;
 if (!empty($_SESSION['login']))
 {
-
     if (isset($login_cookie))
     {
         echo "Bem-Vindo(a), $login_cookie" . ' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a><br>';
         echo "<h3>Artigos recomendados de acordo com seu perfil:</h3>";
         echo "<br>";
     }
-
 }
 else
 {
@@ -56,7 +49,6 @@ $client = Elasticsearch\ClientBuilder::create()->build();
 
 $like = "";
 $dislike = "";
-
 $params2 = ['index' => 'avaliar', 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie, "fields" => ["email"], "default_operator" => "or"
 
 ]]]];
@@ -71,17 +63,14 @@ else
 {
     if (!empty($results2['hits']['hits']))
     {
-
         foreach ($results2['hits']['hits'] as $hit)
         {
             if ($hit['_source']['email'] == $login_cookie)
             {
                 $like = $hit['_source']['liked_id'];
-
             }
         }
     }
-
 }
 
 if (!empty($_REQUEST['dislikes']))
@@ -92,7 +81,6 @@ else
 {
     if (!empty($results2['hits']['hits']))
     {
-
         foreach ($results2['hits']['hits'] as $hit)
         {
             if ($hit['_source']['email'] == $login_cookie)
@@ -120,7 +108,6 @@ $count = 0;
 $perfil_relevante = array();
 if (!empty($results['hits']['hits']))
 {
-
     foreach ($results['hits']['hits'] as $hit)
     {
         if ($hit['_source']['email'] == $login_cookie)
@@ -286,9 +273,9 @@ foreach ($idEsArray as $key => $value)
     }
     $contador++;
 }
-echo "titleArray: <br>";
-print_r($titleArray);
-echo "<br><br><br><br>";
+// echo "titleArray: <br>";
+// print_r($titleArray);
+// echo "<br><br><br><br>";
 
 echo "articlePerWord: <br>";
 print_r($articlePerWord);
@@ -435,11 +422,11 @@ foreach ($titleArray as $key => $value)
 }
 echo '</div>';
 
-
+$nCriticalWord = 0;
 $contador = 1;
 if ($missWord)
 {
-    $nCriticalWord = 0;
+    
     for ($i = 0;$i < count($words);$i++)
     {
         if ($countCriticalWord[$words[$i]] === 1)
@@ -598,6 +585,26 @@ if ($missWord)
     echo "<br><br>";
 }
 echo '</div>';
+
+/*Envia analises*/
+$indexed = $client->index([
+              'index' => 'analises',
+              'type' => '_doc',
+              'body' => [
+                  'email' => $login_cookie,
+                  'perfil' => $perfil_relevante,
+                  'scoreArray'=> json_encode($scoreArray),
+                  'nArticleFound' => sizeof($idEsArray),
+                  'articlePerWord' => json_encode($articlePerWord),
+                  'resultsPerWord' => json_encode($resultsPerWord),
+                  'countCriticalWord' => json_encode($countCriticalWord),
+                  'criticalArticle' => json_encode($criticalArticle),
+                  'missWord' => $missWord ? "true" : "false",
+                  'scoreArray2' => json_encode($scoreArray2),
+                  'nCriticalWord' => json_encode($nCriticalWord),
+                  'scoreRetired' => json_encode($scoreRetired),
+               ],
+            ]);
 
 ?>
 <div class="row">
