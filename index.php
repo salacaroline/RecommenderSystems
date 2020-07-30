@@ -94,7 +94,7 @@ else
 
 // echo $like;
 // echo $dislike;
-$params = ['index' => 'usuarios_', "size" => 5000, 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie,
+$params = ['index' => 'usuarios', "size" => 5000, 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie,
 
 "fields" => ["email"], "default_operator" => "or"
 
@@ -191,9 +191,9 @@ function getPerTitle($results2, &$titleArray, &$idEsArray, &$scoreArray )
 }
 getPerTitle($results2, $titleArray, $idEsArray, $scoreArray);
 
-echo "scoreArray: <br>'";
-print_r($scoreArray);
-echo "<br><br><br><br>";
+// echo "scoreArray: <br>'";
+// print_r($scoreArray);
+// echo "<br><br><br><br>";
 
 /*obtem todos os autores do artigo em um outro array*/
 function getPerson($results2, $titleArray, &$personArray)
@@ -229,9 +229,9 @@ getPerson($results2, $titleArray, $personArray);
 /*
   PÓS-FILTRO
 */
-echo "Quantidade de artigos encontrados: ";
-print_r(sizeof($idEsArray));
-echo "<br><br>";
+// echo "Quantidade de artigos encontrados: ";
+// print_r(sizeof($idEsArray));
+// echo "<br><br>";
 /*cria a matriz de resultadosxpalavras e artigosxpalavras*/
 foreach ($idEsArray as $key => $value)
 {
@@ -277,13 +277,13 @@ foreach ($idEsArray as $key => $value)
 // print_r($titleArray);
 // echo "<br><br><br><br>";
 
-echo "articlePerWord: <br>";
-print_r($articlePerWord);
-echo "<br><br><br><br>";
+// echo "articlePerWord: <br>";
+// print_r($articlePerWord);
+// echo "<br><br><br><br>";
 
-echo "resultsPerWord: <br>";
-print_r($resultsPerWord);
-echo "<br><br>";
+// echo "resultsPerWord: <br>";
+// print_r($resultsPerWord);
+// echo "<br><br>";
 
 /*Lógica para criar perfil invertido*/
 $missWord = false;
@@ -325,13 +325,13 @@ foreach ($idEsArray as $key => $value)
     $j++;
 }
 
-echo "countCriticalWord: <br>";
-print_r($countCriticalWord);//Se 1 essa palavra só existe nesse arquivo
-echo "<br><br>";
+// echo "countCriticalWord: <br>";
+// print_r($countCriticalWord);//Se 1 essa palavra só existe nesse arquivo
+// echo "<br><br>";
 
-echo "criticalArticle: <br>";
-print_r($criticalArticle); //Armazena a palavra e o artigo (título)
-echo "<br><br>";
+// echo "criticalArticle: <br>";
+// print_r($criticalArticle); //Armazena a palavra e o artigo (título)
+// echo "<br><br>";
 
 $titleArray2 = [];
 $personArray2 = [];
@@ -339,9 +339,9 @@ $idEsArray2 = [];
 $scoreArray2 = [];
 $scoreRetired = [];
 
-echo "missWord: <br>";
-echo ($missWord ? "true" : "false");
-echo "<br><br>";
+// echo "missWord: <br>";
+// echo ($missWord ? "true" : "false");
+// echo "<br><br>";
 
 if ($missWord)
 {
@@ -576,13 +576,13 @@ if ($missWord)
     }
     echo '</div>';
 
-    echo "<br>nCriticalWord: <br>";
-    print_r($nCriticalWord);
-    echo "<br><br><br><br>";
+    // echo "<br>nCriticalWord: <br>";
+    // print_r($nCriticalWord);
+    // echo "<br><br><br><br>";
 
-    echo "scoreRetired: <br>";
-    print_r($scoreRetired);
-    echo "<br><br>";
+    // echo "scoreRetired: <br>";
+    // print_r($scoreRetired);
+    // echo "<br><br>";
 }
 echo '</div>';
 
