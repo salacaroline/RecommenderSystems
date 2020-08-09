@@ -38,7 +38,8 @@ $logado = $_SESSION['email'];
 
 require 'vendor/autoload.php';
 
-$client = Elasticsearch\ClientBuilder::create()->build();
+$host = ["http://search-sistemarecomendacao-n4nryark2nid6lbezhlvlm3imm.sa-east-1.es.amazonaws.com:80"];
+$client = Elasticsearch\ClientBuilder::create()->setHosts($host)->build();
 // (4)
 if (isset($_GET['q']))
 {

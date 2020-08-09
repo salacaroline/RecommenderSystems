@@ -6,7 +6,8 @@ session_start();
 
 require 'vendor/autoload.php';
 
-$client = Elasticsearch\ClientBuilder::create()->build();
+$host = [""];
+$client = Elasticsearch\ClientBuilder::create()->setHosts($host)->build();
 
 if (!empty($_REQUEST))
 { // (4)
@@ -17,6 +18,7 @@ if (!empty($_REQUEST))
         $senha = $_REQUEST['senha'];
         $email = $_REQUEST['email'];
         $instituicao = $_REQUEST['instituicao'];
+        $conhecoIHC = $_REQUEST['conhecoIHC'];
         $_SESSION['login'] = $email;
         $_SESSION['senha'] = $senha;
 
@@ -24,7 +26,7 @@ if (!empty($_REQUEST))
         #$attributes = explode(',', $_REQUEST['attributes']); // (5)
         //echo $senha;
         // (6)
-        $indexed = $client->index(['index' => 'usuarios_', 'type' => '_doc', 'body' => ['nome' => $nome, 'senha' => $senha, 'email' => $email, 'instituicao' => $instituicao, 'perfil' => $perfil,
+        $indexed = $client->index(['index' => 'usuarios_', 'type' => '_doc', 'body' => ['nome' => $nome, 'senha' => $senha, 'email' => $email, 'instituicao' => $instituicao, 'perfil' => $perfil, 'conhecoIHC'=> $conhecoIHC,
 
         ], ]);
          //header("Location:open.php");

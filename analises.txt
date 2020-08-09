@@ -1,0 +1,19 @@
+PUT /analises
+{
+  "mappings": {
+    "properties": {
+      "email":  { "type": "keyword"  },
+      "perfil":  { "type": "text"  },
+      "scoreArray":  { "type": "text"  },
+      "nArticleFound":  { "type": "integer"  },
+      "articlePerWord":  { "type": "text"  },
+      "resultsPerWord":   { "type": "text"  },    
+      "countCriticalWord":   { "type": "text"  },
+      "criticalArticle":   { "type": "text"  },
+      "missWord":   { "type": "text"  },
+      "scoreArray2":   { "type": "text"  },
+      "nCriticalWord":   { "type": "integer"  },
+      "scoreRetired":   { "type": "text"  }
+    }
+  }
+}

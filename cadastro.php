@@ -65,20 +65,35 @@ for ($i = 1;$i < 11;$i++)
                     </div>
 
                     <div class="form-group">
-                      <label class="col-md-2 control-label" for="textinput">Instituição: </label>
-                        <div class="col-md-4">
-                          <input id="instituicao" name="instituicao" placeholder="" class="form-control input-md" type="text">
-                        </div>
-                    </div>
-
-                  <!-- Multiple Radios (inline) -->
-
-                  <div class="form-group">
                     <label class="col-md-2 control-label" for="textinput">Senha: <h11>*</h11></label>
                       <div class="col-md-2">
                         <input id="senha" name="senha" placeholder="" class="form-control input-md" type="password">
                       </div>
                   </div>
+
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="textinput">Instituição: </label>
+                        <div class="col-md-4">
+                          <input id="instituicao" name="instituicao" placeholder="" class="form-control input-md" type="text">
+                        </div>
+                    </div>
+                   
+
+                  <!-- Multiple Radios (inline) -->
+
+                  
+
+                   <div class="form-group">
+                      <label class="col-md-4 control-label" for="exampleFormControlSelect1">Você conhece a área de Interação Humano-Computador?<h11>*</h11></label>
+                      <div class="col-md-2">
+                      <select class="form-control" id="conhecoIHC" name="conhecoIHC" placeholder="Selecione uma opção" required="">
+                        <option value=""></option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                      </select>
+                    
+                    </div>
+                    </div>
 
                   <div class="form-group">
                     <div class="col-md-2 control-label">
@@ -174,6 +189,7 @@ for ($i = 1;$i < 11;$i++)
             var frutas = document.getElementsByName("fruit[]");
             var txt1 = document.getElementById("txt1");
 
+
             frutas = [].slice.apply(frutas);
             var listCheckedOptions = frutas.filter(function (fruta, indice) {
                 return fruta.checked;
@@ -239,8 +255,13 @@ for ($i = 1;$i < 11;$i++)
                 }
 
               }
+               var conhecoIHC = document.getElementById("conhecoIHC");
+              
               if (count<5){
                 alert("Mín de 5 elementos selecionados!");
+                return false;
+              }else if(conhecoIHC.selectedIndex == 0){
+                alert("Selecione sim ou não");
                 return false;
               }else{
 
