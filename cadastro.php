@@ -248,6 +248,9 @@ for ($i = 1;$i < 11;$i++)
               var count=0;
               let text = txt1.value;
              var check= document.getElementsByName("fruit[]");
+             var nome = document.getElementById("nome").value;
+             var email = document.getElementById("email").value;
+             var senha = document.getElementById("senha").value;
 
               for (var i = 0; i < check.length; i++) {
                 if(check[i].checked){
@@ -262,6 +265,9 @@ for ($i = 1;$i < 11;$i++)
                 return false;
               }else if(conhecoIHC.selectedIndex == 0){
                 alert("Selecione sim ou não");
+                return false;
+              }else if(nome.length == 0 || email.length == 0 || senha == 0){
+                alert("Campos obrigatório precisam ser preenchidos!");
                 return false;
               }else{
 
