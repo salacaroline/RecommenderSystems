@@ -95,7 +95,7 @@ else
 
 // echo $like;
 // echo $dislike;
-$params = ['index' => 'usuarios', "size" => 5000, 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie,
+$params = ['index' => 'usuarios_', "size" => 5000, 'body' => ["query" => ["simple_query_string" => ["query" => $login_cookie,
 
 "fields" => ["email"], "default_operator" => "or"
 
