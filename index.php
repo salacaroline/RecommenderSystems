@@ -370,6 +370,8 @@ echo '<div class="row">';
 echo '<div class="col-md-6">';
 
 /*Primeira coluna de resultados do algoritmo baseline*/
+if (!$missWord)
+{
 foreach ($titleArray as $key => $value)
 {
     if ($contador < 10)
@@ -422,11 +424,11 @@ foreach ($titleArray as $key => $value)
 
 }
 echo '</div>';
+else{
 
 $nCriticalWord = 0;
 $contador = 1;
-if ($missWord)
-{
+
     
     for ($i = 0;$i < count($words);$i++)
     {
