@@ -424,7 +424,7 @@ foreach ($titleArray as $key => $value)
 
 }
 echo '</div>';
-else{
+}else{
 
 $nCriticalWord = 0;
 $contador = 1;
