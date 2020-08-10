@@ -121,8 +121,6 @@ if (!empty($results['hits']['hits']))
 echo "Seu perfil: " . $perfil_relevante;
 echo "<br>";
 echo "<br>";
-echo "<br>";
-echo "<br>";
 echo "Caso deseje pesquisar outros artigos:";
 echo "<br>";
 echo "<br>";
@@ -353,9 +351,9 @@ if ($missWord)
     $results2 = $client->search($params2);
     getPerTitle($results2, $titleArray2, $idEsArray2, $scoreArray2);
     getPerson($results2, $titleArray2, $personArray2);
-    echo "scoreArray2: <br>";
-    print_r($scoreArray2);
-    echo "<br><br>";
+    // echo "scoreArray2: <br>";
+    // print_r($scoreArray2);
+    // echo "<br><br>";
 
 }
 
@@ -368,7 +366,7 @@ echo '  <div class="col-md-7 control-label">
 $contador = 0;
 echo '<div class="row">';
 echo '<div class="col-md-6">';
-
+$nCriticalWord = 0;
 /*Primeira coluna de resultados do algoritmo baseline*/
 if (!$missWord)
 {
@@ -399,7 +397,7 @@ foreach ($titleArray as $key => $value)
 
         echo '
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-8">
             <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
             <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
@@ -423,10 +421,10 @@ foreach ($titleArray as $key => $value)
     }
 
 }
-echo '</div>';
+//echo '</div>';
 }else{
 
-$nCriticalWord = 0;
+
 $contador = 1;
 
     
@@ -461,7 +459,7 @@ $contador = 1;
         }    
     }
 
-    echo '<div class="col-md-6">';
+    //echo '<div class="col-md-6">';
     foreach ($titleArray as $key => $value)
     {
 
@@ -493,7 +491,7 @@ $contador = 1;
 
             echo '
           <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-8">
           <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
           <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
@@ -556,7 +554,7 @@ $contador = 1;
 
         echo '
           <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-8">
               <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
               <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
@@ -577,7 +575,7 @@ $contador = 1;
         ';
         $contador2++;
     }
-    echo '</div>';
+    
 
     // echo "<br>nCriticalWord: <br>";
     // print_r($nCriticalWord);
@@ -587,6 +585,7 @@ $contador = 1;
     // print_r($scoreRetired);
     // echo "<br><br>";
 }
+echo '</div>';
 echo '</div>';
 
 /*Envia analises*/
