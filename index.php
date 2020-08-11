@@ -6,11 +6,20 @@
         <link rel="stylesheet" type="text/css" href="css/css.css">
     </head>
     <body>
+        <script type="text/javascript">
+            window.onload = function() {
+            if (!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload();
+            }
+}
+        </script>
 <?php
 #caminho do arquivo no ubuntu: Computer/usr/share/nginx/html/tcc
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 
 session_start();
 if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true))
