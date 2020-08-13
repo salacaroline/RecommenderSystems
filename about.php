@@ -27,7 +27,7 @@
         <a class="nav-link" >|</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.php" >Quem Somos</a>
+        <a class="nav-link" href ="about.php">Quem Somos</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#services">Pesquisar</a>
@@ -46,17 +46,22 @@
             <div class="col-md-5">
                 <div class="pt-5"></div>
                 <h3>SISTEMA DE RECOMENDAÇÃO</h3>
-                <h3>Deseja saber os melhores artigos de acordo com seu perfil?</h3>
-                <p></p>
-                <button type="button"class="btn btn-warning"  onclick="window.location.href='login.php'">RECOMENDAÇÃO</button>
-                <button type="button"class="btn btn-warning"  onclick="window.location.href='cadastro.php'">CADASTRE-SE</button>
+                
+                <p>Este sistema de recomendação foi desenvolvido por duas desenvolvedoras como trabalho de conclusão de curso e que estudam a área de Interação Humano-Computador, especificamente a parte de Sistemas de Recomendação. </p>
+                
+                Caroline Sala de Borba - trabalho de conclusão de curso em andamento (2020).<h6 style="font-size: 12px;">contato através do e-mail salacaroline@hotmail.com</h6>
+                
+                </br>
+                Nathália Locatelli Cezar - trabalho de conclusão de curso finalizado em (2019).
+                <h6 style="font-size: 12px;">contato através do e-mail nathalia.lcz@hotmail.com</h6>
+                <br>
+                Orientadores:<br>
+                Isabela Gasparini (UDESC CCT) </br> <h6 style="font-size: 12px;">isabela.gasparini@udesc.br</h6>
+                Daniel Lichtnow (UFSM) </br> <h6 style="font-size: 12px;">dlichtnow@gmail.com</h6>
                 <br>
                 <br>
                 <br>
                 <br>
-                <h3>PESQUISAR</h3>
-                <h3>Pesquise aqui o que desejar</h3>
-                <button type="button"class="btn btn-warning"  onclick="window.location.href='pesquisa.php'">PESQUISA</button>
             </div>
             <div class="col-md-2">
                 <img src="ihc.jpg" style="width:650px;height:350px;">
