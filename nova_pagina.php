@@ -29,9 +29,9 @@ if (!empty($_REQUEST))
         $indexed = $client->index(['index' => 'usuarios_', 'type' => '_doc', 'body' => ['nome' => $nome, 'senha' => $senha, 'email' => $email, 'instituicao' => $instituicao, 'perfil' => $perfil, 'conhecoIHC'=> $conhecoIHC,
 
         ], ]);
-         //header("Location:open.php");
+         header("Location:login.php");
     }else{
-      //header('Location: home.php');
+      header('Location: login.php');
     }
 }
 
@@ -40,7 +40,7 @@ echo "
 <head>
 </head>
 <body>
-  <form id='Form1' action='index.php'>
+  <form id='Form1' >
   <script>
     document.getElementById('Form1').submit();
   </script>

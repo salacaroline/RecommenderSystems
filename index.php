@@ -6,19 +6,15 @@
         <link rel="stylesheet" type="text/css" href="css/css.css">
     </head>
     <body>
-        <script type="text/javascript">
-            window.onload = function() {
-            if (!window.location.hash) {
-                window.location = window.location + '#loaded';
-                window.location.reload();
-            }
-}
-        </script>
+        
 <?php
 #caminho do arquivo no ubuntu: Computer/usr/share/nginx/html/tcc
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+$err = error_reporting(E_ALL);
+if($err > 0){
+
+}
 
 
 session_start();
@@ -597,25 +593,36 @@ $contador = 1;
 echo '</div>';
 echo '</div>';
 
-/*Envia analises*/
-$indexed = $client->index([
-              'index' => 'analises',
-              'type' => '_doc',
-              'body' => [
-                  'email' => $login_cookie,
-                  'perfil' => $perfil_relevante,
-                  'scoreArray'=> json_encode($scoreArray),
-                  'nArticleFound' => sizeof($idEsArray),
-                  'articlePerWord' => json_encode($articlePerWord),
-                  'resultsPerWord' => json_encode($resultsPerWord),
-                  'countCriticalWord' => json_encode($countCriticalWord),
-                  'criticalArticle' => json_encode($criticalArticle),
-                  'missWord' => $missWord ? "true" : "false",
-                  'scoreArray2' => json_encode($scoreArray2),
-                  'nCriticalWord' => json_encode($nCriticalWord),
-                  'scoreRetired' => json_encode($scoreRetired),
-               ],
-            ]);
+$params5 = ['index' => 'analises', 'size' => 1, 'body' => ["query" => ["query_string" => ["query" => $login_cookie, "fields" => ["email"]]]]];
+
+$results5 = $client->search($params5);
+
+//print_r($results5);
+
+ if($results5['hits']['total']['value'] === 0){
+    //echo "ihaaaaaaaaaa";
+     /*Envia analises*/
+    $indexed = $client->index([
+                  'index' => 'analises',
+                  'type' => '_doc',
+                  'body' => [
+                      'email' => $login_cookie,
+                      'perfil' => $perfil_relevante,
+                      'scoreArray'=> json_encode($scoreArray),
+                      'nArticleFound' => sizeof($idEsArray),
+                      'articlePerWord' => json_encode($articlePerWord),
+                      'resultsPerWord' => json_encode($resultsPerWord),
+                      'countCriticalWord' => json_encode($countCriticalWord),
+                      'criticalArticle' => json_encode($criticalArticle),
+                      'missWord' => $missWord ? "true" : "false",
+                      'scoreArray2' => json_encode($scoreArray2),
+                      'nCriticalWord' => json_encode($nCriticalWord),
+                      'scoreRetired' => json_encode($scoreRetired),
+                   ],
+               ]);
+
+}
+
 
 ?>
 <div class="row">

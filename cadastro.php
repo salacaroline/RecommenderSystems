@@ -173,7 +173,7 @@ for ($i = 1;$i < 11;$i++)
                   <br />
               <textarea rows="4" cols="50" name="txt1" id="txt1" style="color:#808080"  readonly></textarea>
 
-              <input type="hidden" value="" id="parametros" name="parametros"
+              <input type="hidden" value="" id="parametros" name="parametros">
         <br />
         <br />
         <br />
