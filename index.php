@@ -363,7 +363,7 @@ if ($missWord)
 }
 
 echo '  <div class="col-md-7 control-label">
-          <p class="help-block"><h11>*</h11> Não esqueça de enviar sua avaliação dos artigos no final da página! </p><br><br>
+          <p class="help-block"><h11>*</h11> Não esqueça clicar em gostei ou não gostei e de enviar sua avaliação dos artigos no final da página! :) </p><br><br>
         </div>
         </br>
         </br>
