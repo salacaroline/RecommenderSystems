@@ -1,0 +1,30 @@
+.escondido{
+            display: none;
+}
+h11 {
+    color:red;
+}
+body {
+    margin: 1em;
+}
+
+#logo {
+        width:50%;
+        height:50%;
+}
+
+#table {
+   border-collapse: separate;
+   border-spacing: 50px;
+}
+
+table.test td {
+    background-color: lime;
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+}
+table.test {
+    border-collapse: separate;
+    border-spacing: 10px;
+    *border-collapse: expression('separate', cellSpacing = '10px');
+}
