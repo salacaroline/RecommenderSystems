@@ -611,13 +611,13 @@ $contador = 1;
 echo '</div>';
 echo '</div>';
 
-$params5 = ['index' => 'analises', 'size' => 1, 'body' => ["query" => ["query_string" => ["query" => $login_cookie, "fields" => ["email"]]]]];
+//$params5 = ['index' => 'analises', 'size' => 1, 'body' => ["query" => ["query_string" => ["query" => $login_cookie, "fields" => ["email"]]]]];
 
-$results5 = $client->search($params5);
+//$results5 = $client->search($params5);
 
 //print_r($results5);
 
- if($results5['hits']['total']['value'] === 0){
+// if($results5['hits']['total']['value'] === 0){
     //echo "ihaaaaaaaaaa";
      /*Envia analises*/
     $indexed = $client->index([
@@ -639,7 +639,7 @@ $results5 = $client->search($params5);
                    ],
                ]);
 
-}
+//}
 
 
 ?>
