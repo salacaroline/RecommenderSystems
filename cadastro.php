@@ -179,7 +179,8 @@ for ($i = 1;$i < 11;$i++)
         <br />
         <div class="col-md-8">
           <button id="Cadastrar" name="Cadastrar" type='button' class="btn btn-success" onclick = "GetSelected()" >Cadastrar</button>
-          <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+          <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="cancel"
+          onclick="history.back();">Cancelar</button>
         </div>
       </div>
      </div>
