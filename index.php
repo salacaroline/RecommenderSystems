@@ -435,7 +435,7 @@ foreach ($titleArray as $key => $value)
         echo '
         <div class="row">
           <div class="col-md-8">
-            <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Ver Resumo em Ingles</button>
+            <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
             <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
         echo '
