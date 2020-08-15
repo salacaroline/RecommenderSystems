@@ -4,6 +4,18 @@
         <title>Recomendação</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="stylesheet" type="text/css" href="css/css.css">
+        <style type="text/css">
+        
+        </style>
+        <script type="text/javascript">
+            function mostra(id){
+                if(document.getElementById(id.trim()).style.display == 'block'){
+                    document.getElementById(id.trim()).style.display = 'none';
+                }else{
+                    document.getElementById(id.trim()).style.display = 'block';
+                }
+            }
+        </script>
     </head>
     <body>
         
@@ -38,9 +50,9 @@ if (!empty($_SESSION['login']))
 {
     if (isset($login_cookie))
     {
-        echo "Bem-Vindo(a), $login_cookie" . ' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a><br>';
+        echo "<p align='right'>Bem-Vindo(a), $login_cookie" . ' |     <a href="home.php" >Home</a>   |         <a href="logout.php" >Sair</a></p>';
         echo "<h3>Artigos recomendados de acordo com seu perfil:</h3>";
-        echo "<br>";
+        echo "";
     }
 }
 else
@@ -125,11 +137,6 @@ if (!empty($results['hits']['hits']))
 
 echo "Seu perfil: " . $perfil_relevante;
 echo "<br>";
-echo "<br>";
-echo "Caso deseje pesquisar outros artigos:";
-echo "<br>";
-echo "<br>";
-echo '<a href="pesquisa.php" class="btn btn-primary">Pesquisar</a> ';
 echo "<br>";
 
 $perfil_relevante = explode(",", $perfil_relevante);
@@ -403,25 +410,20 @@ foreach ($titleArray as $key => $value)
         echo '
         <div class="row">
           <div class="col-md-8">
-            <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
+            <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Ver Resumo em Ingles</button>
             <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
-        if ($value['paper_year'] >= '2006')
-        {
-            echo '
-            <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>
-
-        </div>';
-        }else{
-          echo '
-            <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary" disabled>Acesso</a>
-
-        </div>';
-        }
         echo '
-          <HR WIDTH=100%>
-        
-      ';
+          <input type="button" class="btn btn-primary" value="Resumo (Inglês)" onClick="mostra(\''.$value["paper_id"].'\')"/>
+          </div>';
+            
+            echo '</br>
+            <div id="'. $value['paper_id'] .'" class="escondido">
+            '.$value["paper_abstract_EN"].'
+            </div>
+        <HR WIDTH=100%>
+      
+      '; 
         ++$contador;
     }
 
@@ -500,19 +502,14 @@ $contador = 1;
           <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
           <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
-
-            if ($value['paper_year'] >= '2006')
-            {
                 echo '
-          <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>
+          <input type="button" class="btn btn-primary" value="Resumo (Inglês)" onClick="mostra(\''.$value["paper_id"].'\')"/>
           </div>';
-            }else{
-              echo '
-                <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary" disabled>Acesso</a>
-
-            </div>';
-            }
-            echo '
+            
+            echo '</br>
+            <div id="'. $value['paper_id'] .'" class="escondido">
+            '.$value["paper_abstract_EN"].'
+            </div>
         <HR WIDTH=100%>
       
       ';    
@@ -563,21 +560,17 @@ $contador = 1;
               <button type="button" ' . $block . ' class="btn btn-primary" id="like_' . $value['paper_id'] . '" onclick="likeFunction(this)">Gostei</button>
               <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
-        if ($value['paper_year'] >= '2006')
-        {
-            echo '
-              <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary">Acesso</a>
-          </div>';
-        }else{
-          echo '
-            <a href="https://dl.acm.org/event.cfm?id=RE449" class="btn btn-primary" disabled>Acesso</a>
-
-        </div>';
-        }
         echo '
-            <HR WIDTH=100%>
-         
-        ';
+          <input type="button" class="btn btn-primary" value="Resumo (Inglês)" onClick="mostra(\''.$value["paper_id"].'\')"/>
+          </div>';
+            
+            echo '</br>
+            <div id="'. $value['paper_id'] .'" class="escondido">
+            '.$value["paper_abstract_EN"].'
+            </div>
+        <HR WIDTH=100%>
+      
+      ';   
         $contador2++;
     }
     

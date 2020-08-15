@@ -1,3 +1,9 @@
+.escondido{
+            display: none;
+}
+input{
+    display: block;
+}
 h11 {
     color:red;
 }

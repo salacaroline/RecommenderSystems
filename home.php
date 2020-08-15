@@ -48,15 +48,17 @@
                 <h3>SISTEMA DE RECOMENDAÇÃO</h3>
                 <h3>Deseja saber os melhores artigos de acordo com seu perfil?</h3>
                 <p></p>
-                <button type="button"class="btn btn-warning"  onclick="window.location.href='login.php'">RECOMENDAÇÃO</button>
+                <button type="button"class="btn btn-warning"  onclick="window.location.href='login.php'">LOG IN</button>
                 <button type="button"class="btn btn-warning"  onclick="window.location.href='cadastro.php'">CADASTRE-SE</button>
                 <br>
                 <br>
                 <br>
                 <br>
-                <h3>PESQUISAR</h3>
-                <h3>Pesquise aqui o que desejar</h3>
-                <button type="button"class="btn btn-warning"  onclick="window.location.href='pesquisa.php'">PESQUISA</button>
+                <br>
+                <br>
+                <br>
+                <br>
+              
             </div>
             <div class="col-md-2">
                 <img src="ihc.jpg" style="width:650px;height:350px;">

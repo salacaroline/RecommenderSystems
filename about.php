@@ -47,7 +47,7 @@
                 <div class="pt-5"></div>
                 <h3>SISTEMA DE RECOMENDAÇÃO</h3>
                 
-                <p>Este sistema de recomendação foi desenvolvido por duas desenvolvedoras como trabalho de conclusão de curso e que estudam a área de Interação Humano-Computador, especificamente a parte de Sistemas de Recomendação. </p>
+                <p>Este sistema de recomendação foi desenvolvido por Caroline Sala de Borba e Nathália Locatelli Cezar como trabalho de conclusão de curso.  </p>
                 
                 Caroline Sala de Borba - trabalho de conclusão de curso em andamento (2020).<h6 style="font-size: 12px;">contato através do e-mail salacaroline@hotmail.com</h6>
                 
