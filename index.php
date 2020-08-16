@@ -733,6 +733,7 @@ echo '</div>';
 
         //var form = document.getElementById("Form1");
         var url = "checks.php?like="+encodeURIComponent(likeString)+"&dislike="+encodeURIComponent(dislikedString);
+        window.alert("Avaliação enviada com sucesso!");
         window.location.href = url;
       }
 
