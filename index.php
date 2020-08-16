@@ -642,11 +642,11 @@ echo '</div>';
 //}
 
 
-?>
+echo '
 <div class="row">
 <div class="col-md-12">
-<button type="button" onclick="enviaForm()"  class="btn btn-primary btn-lg btn-block">Enviar Avaliações
-
+<button type="button" '.$block.' onclick="enviaForm()"  class="btn btn-primary btn-lg btn-block">Enviar Avaliações';
+?>
     <script>
     var like = "<?php echo $like; ?>";
     var dislike = "<?php echo $dislike; ?>";
