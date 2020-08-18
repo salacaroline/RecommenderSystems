@@ -120,9 +120,11 @@ for ($i = 1;$i < 11;$i++)
 
               <div class="panel-body">
                 <div class="form-group">
-
-                  <div class="col-md-2 control-label">
-                    <p class="help-block"><h11>*</h11> Selecione 5 termos </p>
+                  <div class="col-md-4 control-label">
+                    <p class="help-block"> <h11>*</h11> Selecione 5 termos por ordem de importância  <br>(do mais importante para o menos importante)  </p>
+                  
+                   
+                    
                   </div>
                 </div>
 
