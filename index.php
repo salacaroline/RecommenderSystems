@@ -687,7 +687,7 @@ echo '
       if (dislikedString.includes(liked)) {
         document.getElementById("notLikeArray").value = dislikedString.replace(liked+";", "");
         document.getElementById("likeArray").value = likeString.replace(liked+";", "");
-        document.getElementById("like_"+disliked).style.backgroundColor = '';
+        document.getElementById("like_"+liked).style.backgroundColor = '';
       }
 
       if (likeString.includes(liked)) {
@@ -698,6 +698,7 @@ echo '
         document.getElementById("like_"+liked).style.backgroundColor = 'green';
 
       }
+      document.getElementById("dislike_"+liked).style.backgroundColor = '';
     }
 
     function dislikeFunction(el) {
@@ -719,6 +720,7 @@ echo '
         document.getElementById("notLikeArray").value = dislikedString+disliked+";"
         document.getElementById("dislike_"+disliked).style.backgroundColor = 'red';
       }
+      document.getElementById("like_"+disliked).style.backgroundColor = '';
 
     }
 
