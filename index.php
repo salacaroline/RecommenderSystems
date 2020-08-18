@@ -439,7 +439,7 @@ foreach ($titleArray as $key => $value)
             <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
         echo '
-          <input type="button" class="btn btn-primary" value="Resumo (Inglês)" onClick="mostra(\''.$value["paper_id"].'\')"/>
+          <input type="button" class="btn btn-primary" value="Abstract" onClick="mostra(\''.$value["paper_id"].'\')"/>
           </div>';
             
             echo '</br>
@@ -528,7 +528,7 @@ $contador = 1;
           <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
                 echo '
-          <input type="button" class="btn btn-primary" value="Resumo (Inglês)" onClick="mostra(\''.$value["paper_id"].'\')"/>
+          <input type="button" class="btn btn-primary" value="Abstract" onClick="mostra(\''.$value["paper_id"].'\')"/>
           </div>';
             
             echo '</br>
@@ -586,7 +586,7 @@ $contador = 1;
               <button type="button" ' . $block . ' class="btn btn-primary" id="dislike_' . $value['paper_id'] . '"onclick="dislikeFunction(this)">Não Gostei</button>
           </div>';
         echo '
-          <input type="button" class="btn btn-primary" value="Resumo (Inglês)" onClick="mostra(\''.$value["paper_id"].'\')"/>
+          <input type="button" class="btn btn-primary" value="Abstract" onClick="mostra(\''.$value["paper_id"].'\')"/>
           </div>';
             
             echo '</br>
