@@ -11,13 +11,19 @@ if ($fp)
 {
     $array = explode(",", fread($fp, filesize($filename)));
 }
+for ($i = 1;$i < 11;$i++)
+{
+  $perfil[$k] = "";
+}
 $k = 0;
 for ($i = 1;$i < 11;$i++)
 {
 
-    $rand_keys = array_rand($array);
-
-    $perfil[$k] = $array[$rand_keys];
+   do{
+      $rand_keys = array_rand($array);
+      $word = $array[$rand_keys];
+    }while(array_search($word, $perfil));
+    $perfil[$k] = $word ;
     $k++;
 
 }
