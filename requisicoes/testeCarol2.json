@@ -1,0 +1,718 @@
+{
+  "took" : 14,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1798,
+      "relation" : "eq"
+    },
+    "max_score" : 42.2137,
+    "hits" : [
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "vwmxCnIBjJXsSiKIT8h7",
+        "_score" : 42.2137,
+        "_source" : {
+          "person_name" : "Clarisse Sieckenius de Souza",
+          "paper_id" : 4770,
+          "paper_year" : 2014,
+          "paper_title" : "Characterizing the Tool-notation-people Triplet in Software Modeling Tasks",
+          "paper_abstract_EN" : "The existence of some kind of relationship between the\r\nusability of software development tools and the quality of\r\nuse of the development process end product would not be\r\nsurprising. Yet, this topic hasn’t attracted a substantial share\r\nof interest among HCI or Software Engineering researchers,\r\npossibly because we lack the appropriate conceptual and\r\ntechnical tools to address the problem. In this paper, we\r\narticulate a tool-notation-people triplet and suggest that it\r\ncan be used in interaction design evaluation of modeling\r\ntools used by many software developers. The evaluation is\r\ncarried out with a specific method that combines cognitive\r\nand communicative dimensions of such tools and\r\ncharacterizes how the tool-notation-people triplet is\r\ninstantiated for the case under examination. We\r\ndemonstrate the value of our proposal with a study of IBM\r\nRSA, a popular software modeling tool. The interest of this\r\nwork for the HCI community is to provide a set of\r\nresourceful tools – combined method and triplet – to\r\nidentify and collect interaction issues that could be used to\r\nimprove the design of modeling support tools.",
+          "keyword" : "usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "LwmxCnIBjJXsSiKIT8l7",
+        "_score" : 42.2137,
+        "_source" : {
+          "person_name" : "Juliana Jansen Ferreira",
+          "paper_id" : 4770,
+          "paper_year" : 2014,
+          "paper_title" : "Characterizing the Tool-notation-people Triplet in Software Modeling Tasks",
+          "paper_abstract_EN" : "The existence of some kind of relationship between the\r\nusability of software development tools and the quality of\r\nuse of the development process end product would not be\r\nsurprising. Yet, this topic hasn’t attracted a substantial share\r\nof interest among HCI or Software Engineering researchers,\r\npossibly because we lack the appropriate conceptual and\r\ntechnical tools to address the problem. In this paper, we\r\narticulate a tool-notation-people triplet and suggest that it\r\ncan be used in interaction design evaluation of modeling\r\ntools used by many software developers. The evaluation is\r\ncarried out with a specific method that combines cognitive\r\nand communicative dimensions of such tools and\r\ncharacterizes how the tool-notation-people triplet is\r\ninstantiated for the case under examination. We\r\ndemonstrate the value of our proposal with a study of IBM\r\nRSA, a popular software modeling tool. The interest of this\r\nwork for the HCI community is to provide a set of\r\nresourceful tools – combined method and triplet – to\r\nidentify and collect interaction issues that could be used to\r\nimprove the design of modeling support tools.",
+          "keyword" : "usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "6QmxCnIBjJXsSiKIUMmA",
+        "_score" : 42.2137,
+        "_source" : {
+          "person_name" : "Renato Cerqueira",
+          "paper_id" : 4770,
+          "paper_year" : 2014,
+          "paper_title" : "Characterizing the Tool-notation-people Triplet in Software Modeling Tasks",
+          "paper_abstract_EN" : "The existence of some kind of relationship between the\r\nusability of software development tools and the quality of\r\nuse of the development process end product would not be\r\nsurprising. Yet, this topic hasn’t attracted a substantial share\r\nof interest among HCI or Software Engineering researchers,\r\npossibly because we lack the appropriate conceptual and\r\ntechnical tools to address the problem. In this paper, we\r\narticulate a tool-notation-people triplet and suggest that it\r\ncan be used in interaction design evaluation of modeling\r\ntools used by many software developers. The evaluation is\r\ncarried out with a specific method that combines cognitive\r\nand communicative dimensions of such tools and\r\ncharacterizes how the tool-notation-people triplet is\r\ninstantiated for the case under examination. We\r\ndemonstrate the value of our proposal with a study of IBM\r\nRSA, a popular software modeling tool. The interest of this\r\nwork for the HCI community is to provide a set of\r\nresourceful tools – combined method and triplet – to\r\nidentify and collect interaction issues that could be used to\r\nimprove the design of modeling support tools.",
+          "keyword" : "usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "0wmxCnIBjJXsSiKIScHc",
+        "_score" : 37.983055,
+        "_source" : {
+          "person_name" : "Lucia Vilela Leite Filgueiras",
+          "paper_id" : 4620,
+          "paper_year" : 2006,
+          "paper_title" : "Human Error Simulation as an Aid to HCI Design for Critical Systems",
+          "paper_abstract_EN" : "Human errors are understood as a combination of many factors. Among them are the limitations of human information processing and the difficult matching of automation and human abilities. In the conception of HCI for critical systems, the ability to identify possible human errors and their consequences is fundamental for designing defenses for these errors. However, the myriad of forms that human error can assume may distract the designer from this task. This paper describes S. PERERE (Simulation of Performance in Error), a human erroneous behavior computational simulator and its prospective usage as an aid to critical systems? HCI design. S. PERERE is based on ACT-R (Atomic Components of Thought ? Rational) cognitive architecture.",
+          "keyword" : "cognitive architectures"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "4AmxCnIBjJXsSiKIScHc",
+        "_score" : 37.983055,
+        "_source" : {
+          "person_name" : "Luiz Carlos Begosso",
+          "paper_id" : 4620,
+          "paper_year" : 2006,
+          "paper_title" : "Human Error Simulation as an Aid to HCI Design for Critical Systems",
+          "paper_abstract_EN" : "Human errors are understood as a combination of many factors. Among them are the limitations of human information processing and the difficult matching of automation and human abilities. In the conception of HCI for critical systems, the ability to identify possible human errors and their consequences is fundamental for designing defenses for these errors. However, the myriad of forms that human error can assume may distract the designer from this task. This paper describes S. PERERE (Simulation of Performance in Error), a human erroneous behavior computational simulator and its prospective usage as an aid to critical systems? HCI design. S. PERERE is based on ACT-R (Atomic Components of Thought ? Rational) cognitive architecture.",
+          "keyword" : "cognitive architectures"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "UgmxCnIBjJXsSiKIUM2C",
+        "_score" : 36.73841,
+        "_source" : {
+          "person_name" : "Alexandre A. Freitas",
+          "paper_id" : 4867,
+          "paper_year" : 2016,
+          "paper_title" : "Sugestões para projetos de interface que usam rastreamento de cabeça e comandos de voz",
+          "paper_abstract_EN" : "Multimodal Interactions have been used in many fields of application, such as medicine, manipulation of assistive technologies, interactions in public environments, among others. It is important to not only develop technologies (hardware and software) but to study and project optimization possibilities for the usage of these innovative interfaces as well. This work aims to identify which are the major problems when using head tracking interactions combined with voice commands, this being a multimodal interaction. This evaluation is focused in the lowest level of interaction, which are actions more physical and less cognitive, such as click, drag and drop, scroll a page, among others. Therefore, as consequence of this research, there were proposed some suggestions to improvement of interface projects that use this form of interaction.",
+          "keyword" : " Usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "VgmxCnIBjJXsSiKIUM2C",
+        "_score" : 36.73841,
+        "_source" : {
+          "person_name" : "Carlos G. R. Santos",
+          "paper_id" : 4867,
+          "paper_year" : 2016,
+          "paper_title" : "Sugestões para projetos de interface que usam rastreamento de cabeça e comandos de voz",
+          "paper_abstract_EN" : "Multimodal Interactions have been used in many fields of application, such as medicine, manipulation of assistive technologies, interactions in public environments, among others. It is important to not only develop technologies (hardware and software) but to study and project optimization possibilities for the usage of these innovative interfaces as well. This work aims to identify which are the major problems when using head tracking interactions combined with voice commands, this being a multimodal interaction. This evaluation is focused in the lowest level of interaction, which are actions more physical and less cognitive, such as click, drag and drop, scroll a page, among others. Therefore, as consequence of this research, there were proposed some suggestions to improvement of interface projects that use this form of interaction.",
+          "keyword" : " Usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "WgmxCnIBjJXsSiKIUM2C",
+        "_score" : 36.73841,
+        "_source" : {
+          "person_name" : "Marcelle P. Mota",
+          "paper_id" : 4867,
+          "paper_year" : 2016,
+          "paper_title" : "Sugestões para projetos de interface que usam rastreamento de cabeça e comandos de voz",
+          "paper_abstract_EN" : "Multimodal Interactions have been used in many fields of application, such as medicine, manipulation of assistive technologies, interactions in public environments, among others. It is important to not only develop technologies (hardware and software) but to study and project optimization possibilities for the usage of these innovative interfaces as well. This work aims to identify which are the major problems when using head tracking interactions combined with voice commands, this being a multimodal interaction. This evaluation is focused in the lowest level of interaction, which are actions more physical and less cognitive, such as click, drag and drop, scroll a page, among others. Therefore, as consequence of this research, there were proposed some suggestions to improvement of interface projects that use this form of interaction.",
+          "keyword" : " Usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "XgmxCnIBjJXsSiKIUM2C",
+        "_score" : 36.73841,
+        "_source" : {
+          "person_name" : "Bianchi S. Meiguins",
+          "paper_id" : 4867,
+          "paper_year" : 2016,
+          "paper_title" : "Sugestões para projetos de interface que usam rastreamento de cabeça e comandos de voz",
+          "paper_abstract_EN" : "Multimodal Interactions have been used in many fields of application, such as medicine, manipulation of assistive technologies, interactions in public environments, among others. It is important to not only develop technologies (hardware and software) but to study and project optimization possibilities for the usage of these innovative interfaces as well. This work aims to identify which are the major problems when using head tracking interactions combined with voice commands, this being a multimodal interaction. This evaluation is focused in the lowest level of interaction, which are actions more physical and less cognitive, such as click, drag and drop, scroll a page, among others. Therefore, as consequence of this research, there were proposed some suggestions to improvement of interface projects that use this form of interaction.",
+          "keyword" : " Usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "DQmxCnIBjJXsSiKIUM2C",
+        "_score" : 35.631058,
+        "_source" : {
+          "person_name" : "Sílvia Amélia Bim",
+          "paper_id" : 4860,
+          "paper_year" : 2016,
+          "paper_title" : "Avaliação por Inspeção: Comparação entre Métodos de Base Prática, Cognitiva e Semiótica",
+          "paper_abstract_EN" : "This paper presents a study comparing three inspection methods: Heuristic Evaluation, Cognitive Walkthrough and Semiotic Inspection Method. The objective is to enlighten the novice on HCI methodology improvement and, at the same time, offer new perspectives to experts on the subject. In order to do this, an analysis of the methods applicability on mobile devices is presented, as well as a set of parameters related to the time needed to apply each of the methods, the kind of knowledge generated and the insights created while applying each method. The results suggest that the inspection methods of cognitive and semiotic basis are especially interesting to generate new scientific knowledge in HCI.",
+          "keyword" : "Cognitive Walkthrough"
+        }
+      }
+    ]
+  },
+  "profile" : {
+    "shards" : [
+      {
+        "id" : "[xRHwmIwHSyKgfBZ7j7FqAg][artigos][0]",
+        "searches" : [
+          {
+            "query" : [
+              {
+                "type" : "BooleanQuery",
+                "description" : "((paper_title:cognitive | paper_abstract_EN:cognitive | keyword:cognitive))^5.0 ((paper_title:usability | paper_abstract_EN:usability | keyword:usability))^4.0 ((paper_title:hci | paper_abstract_EN:hci | keyword:hci))^3.0 ((paper_title:computing | paper_abstract_EN:computing | keyword:computing))^2.0 (paper_title:programming | paper_abstract_EN:programming | keyword:programming)",
+                "time_in_nanos" : 8208375,
+                "breakdown" : {
+                  "set_min_competitive_score_count" : 0,
+                  "match_count" : 1798,
+                  "shallow_advance_count" : 0,
+                  "set_min_competitive_score" : 0,
+                  "next_doc" : 2231582,
+                  "match" : 91071,
+                  "next_doc_count" : 1798,
+                  "score_count" : 1798,
+                  "compute_max_score_count" : 0,
+                  "compute_max_score" : 0,
+                  "advance" : 986467,
+                  "advance_count" : 3,
+                  "score" : 1044690,
+                  "build_scorer_count" : 6,
+                  "create_weight" : 2138773,
+                  "shallow_advance" : 0,
+                  "create_weight_count" : 1,
+                  "build_scorer" : 1710388
+                },
+                "children" : [
+                  {
+                    "type" : "BoostQuery",
+                    "description" : "((paper_title:cognitive | paper_abstract_EN:cognitive | keyword:cognitive))^5.0",
+                    "time_in_nanos" : 1560437,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 43,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 261,
+                      "compute_max_score_count" : 43,
+                      "compute_max_score" : 61522,
+                      "advance" : 212645,
+                      "advance_count" : 263,
+                      "score" : 94245,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 731770,
+                      "shallow_advance" : 76197,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 383440
+                    },
+                    "children" : [
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_title:cognitive",
+                        "time_in_nanos" : 502260,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 11,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 17,
+                          "compute_max_score_count" : 12,
+                          "compute_max_score" : 9253,
+                          "advance" : 2910,
+                          "advance_count" : 18,
+                          "score" : 2908,
+                          "build_scorer_count" : 4,
+                          "create_weight" : 451331,
+                          "shallow_advance" : 1799,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 33996
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_abstract_EN:cognitive",
+                        "time_in_nanos" : 469992,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 52,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 248,
+                          "compute_max_score_count" : 48,
+                          "compute_max_score" : 33492,
+                          "advance" : 127748,
+                          "advance_count" : 250,
+                          "score" : 37389,
+                          "build_scorer_count" : 5,
+                          "create_weight" : 161274,
+                          "shallow_advance" : 31242,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 78243
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "keyword:cognitive",
+                        "time_in_nanos" : 151373,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 31,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 26,
+                          "compute_max_score_count" : 33,
+                          "compute_max_score" : 20591,
+                          "advance" : 4553,
+                          "advance_count" : 28,
+                          "score" : 8125,
+                          "build_scorer_count" : 5,
+                          "create_weight" : 73400,
+                          "shallow_advance" : 5417,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 39163
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type" : "BoostQuery",
+                    "description" : "((paper_title:usability | paper_abstract_EN:usability | keyword:usability))^4.0",
+                    "time_in_nanos" : 2022748,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 61,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 717,
+                      "compute_max_score_count" : 61,
+                      "compute_max_score" : 74508,
+                      "advance" : 697846,
+                      "advance_count" : 720,
+                      "score" : 523821,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 365465,
+                      "shallow_advance" : 53212,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 306327
+                    },
+                    "children" : [
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_title:usability",
+                        "time_in_nanos" : 162756,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 29,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 63,
+                          "compute_max_score_count" : 31,
+                          "compute_max_score" : 15830,
+                          "advance" : 10313,
+                          "advance_count" : 65,
+                          "score" : 11588,
+                          "build_scorer_count" : 5,
+                          "create_weight" : 89813,
+                          "shallow_advance" : 4574,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 30444
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_abstract_EN:usability",
+                        "time_in_nanos" : 825149,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 84,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 701,
+                          "compute_max_score_count" : 87,
+                          "compute_max_score" : 93760,
+                          "advance" : 311947,
+                          "advance_count" : 704,
+                          "score" : 111793,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 155444,
+                          "shallow_advance" : 55107,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 95515
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "keyword:usability",
+                        "time_in_nanos" : 173855,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 38,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 70,
+                          "compute_max_score_count" : 56,
+                          "compute_max_score" : 20397,
+                          "advance" : 12066,
+                          "advance_count" : 73,
+                          "score" : 16193,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 87178,
+                          "shallow_advance" : 7202,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 30575
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type" : "BoostQuery",
+                    "description" : "((paper_title:hci | paper_abstract_EN:hci | keyword:hci))^3.0",
+                    "time_in_nanos" : 1720383,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 74,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 707,
+                      "compute_max_score_count" : 74,
+                      "compute_max_score" : 120653,
+                      "advance" : 727152,
+                      "advance_count" : 710,
+                      "score" : 255359,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 259787,
+                      "shallow_advance" : 77219,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 278638
+                    },
+                    "children" : [
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_title:hci",
+                        "time_in_nanos" : 154825,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 32,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 129,
+                          "compute_max_score_count" : 52,
+                          "compute_max_score" : 21074,
+                          "advance" : 16697,
+                          "advance_count" : 132,
+                          "score" : 23181,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 53930,
+                          "shallow_advance" : 5769,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 33822
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_abstract_EN:hci",
+                        "time_in_nanos" : 730292,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 94,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 643,
+                          "compute_max_score_count" : 94,
+                          "compute_max_score" : 116281,
+                          "advance" : 260588,
+                          "advance_count" : 646,
+                          "score" : 101220,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 111195,
+                          "shallow_advance" : 55188,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 84336
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "keyword:hci",
+                        "time_in_nanos" : 136443,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 48,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 73,
+                          "compute_max_score_count" : 51,
+                          "compute_max_score" : 16108,
+                          "advance" : 11837,
+                          "advance_count" : 76,
+                          "score" : 16120,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 54148,
+                          "shallow_advance" : 7382,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 30593
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type" : "BoostQuery",
+                    "description" : "((paper_title:computing | paper_abstract_EN:computing | keyword:computing))^2.0",
+                    "time_in_nanos" : 1004134,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 53,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 332,
+                      "compute_max_score_count" : 53,
+                      "compute_max_score" : 55850,
+                      "advance" : 206496,
+                      "advance_count" : 335,
+                      "score" : 152265,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 379315,
+                      "shallow_advance" : 47486,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 161939
+                    },
+                    "children" : [
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_title:computing",
+                        "time_in_nanos" : 80451,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 0,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 0,
+                          "compute_max_score_count" : 0,
+                          "compute_max_score" : 0,
+                          "advance" : 0,
+                          "advance_count" : 0,
+                          "score" : 0,
+                          "build_scorer_count" : 3,
+                          "create_weight" : 78883,
+                          "shallow_advance" : 0,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 1564
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_abstract_EN:computing",
+                        "time_in_nanos" : 500787,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 66,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 314,
+                          "compute_max_score_count" : 64,
+                          "compute_max_score" : 38058,
+                          "advance" : 114590,
+                          "advance_count" : 317,
+                          "score" : 78671,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 192288,
+                          "shallow_advance" : 23542,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 52870
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "keyword:computing",
+                        "time_in_nanos" : 140603,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 38,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 45,
+                          "compute_max_score_count" : 38,
+                          "compute_max_score" : 16656,
+                          "advance" : 7634,
+                          "advance_count" : 48,
+                          "score" : 9577,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 73799,
+                          "shallow_advance" : 4979,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 27782
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type" : "DisjunctionMaxQuery",
+                    "description" : "(paper_title:programming | paper_abstract_EN:programming | keyword:programming)",
+                    "time_in_nanos" : 989880,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 48,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 218,
+                      "compute_max_score_count" : 48,
+                      "compute_max_score" : 66476,
+                      "advance" : 301631,
+                      "advance_count" : 221,
+                      "score" : 92786,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 299099,
+                      "shallow_advance" : 44510,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 184833
+                    },
+                    "children" : [
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_title:programming",
+                        "time_in_nanos" : 120163,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 20,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 36,
+                          "compute_max_score_count" : 26,
+                          "compute_max_score" : 11039,
+                          "advance" : 6373,
+                          "advance_count" : 38,
+                          "score" : 6702,
+                          "build_scorer_count" : 5,
+                          "create_weight" : 72835,
+                          "shallow_advance" : 2997,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 20091
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "paper_abstract_EN:programming",
+                        "time_in_nanos" : 442878,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 60,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 214,
+                          "compute_max_score_count" : 61,
+                          "compute_max_score" : 48232,
+                          "advance" : 158680,
+                          "advance_count" : 217,
+                          "score" : 36562,
+                          "build_scorer_count" : 6,
+                          "create_weight" : 129922,
+                          "shallow_advance" : 21732,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 47191
+                        }
+                      },
+                      {
+                        "type" : "TermQuery",
+                        "description" : "keyword:programming",
+                        "time_in_nanos" : 118167,
+                        "breakdown" : {
+                          "set_min_competitive_score_count" : 0,
+                          "match_count" : 0,
+                          "shallow_advance_count" : 28,
+                          "set_min_competitive_score" : 0,
+                          "next_doc" : 0,
+                          "match" : 0,
+                          "next_doc_count" : 0,
+                          "score_count" : 31,
+                          "compute_max_score_count" : 29,
+                          "compute_max_score" : 12763,
+                          "advance" : 6864,
+                          "advance_count" : 33,
+                          "score" : 8269,
+                          "build_scorer_count" : 5,
+                          "create_weight" : 63348,
+                          "shallow_advance" : 4080,
+                          "create_weight_count" : 1,
+                          "build_scorer" : 22716
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "rewrite_time" : 94127,
+            "collector" : [
+              {
+                "name" : "SimpleTopScoreDocCollector",
+                "reason" : "search_top_hits",
+                "time_in_nanos" : 1518148
+              }
+            ]
+          }
+        ],
+        "aggregations" : [ ]
+      }
+    ]
+  }
+}

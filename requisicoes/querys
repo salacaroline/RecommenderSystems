@@ -1,0 +1,194 @@
+###########Example of explain
+curl -X GET "localhost:9200/artigos/_explain/sgmxCnIBjJXsSiKIUMuB?pretty" -H 'Content-Type: application/json' -d'
+{
+      "query" : {
+        "query_string" : { 
+        	"query" : "(COLLABORATIVE^1) | (BRAZILIAN^2) | (DATA^3) | (ACADEMIC^4) | (DESIGNERS^5)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+      }
+}
+'
+###########Example of Explain
+curl -X GET "localhost:9200/artigos/_explain/4gmxCnIBjJXsSiKIUMqA?q=paper_title:Cognitive&pretty"
+
+#TesteNat.json
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "profile": true,
+  "query" : {
+        "simple_query_string" : { 
+        	"query" : "(COGNITIVE^5) | (USABILITY^4) | (HCI^3) | (COMPUTING^2) | (PROGRAMMING^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+###########Possível erro aqui 
+paper_title:cognitive paper_title:5 paper_abstract_EN:cognitive paper_abstract_EN:5 keyword:cognitive keyword:5 paper_title:usability paper_title:4 paper_abstract_EN:usability paper_abstract_EN:4 keyword:usability keyword:4 paper_title:hci paper_title:3 paper_abstract_EN:hci paper_abstract_EN:3 keyword:hci keyword:3 
+paper_title:computing paper_title:2 paper_abstract_EN:computing paper_abstract_EN:2 keyword:computing keyword:2 paper_title:programming paper_title:1 paper_abstract_EN:programming paper_abstract_EN:1 keyword:programming keyword:1
+
+###########Example of Ranking Evaluation
+curl -X GET "localhost:9200/artigos/_rank_eval?pretty" -H 'Content-Type: application/json' -d'
+{
+    "requests": [
+    {
+        "id": "JFK query",
+        "request": { "query": { "match_all": {}}},
+        "ratings": [{ "_index": "artigos", "_id": "mQmxCnIBjJXsSiKISb7T", "rating": 1 }]
+    }],
+    "metric": {
+      "precision": {
+        "k" : 10,
+        "relevant_rating_threshold": 1,
+        "ignore_unlabeled": false
+      }
+   }
+}
+'
+###########Example of Ranking Evaluation
+curl -X GET "localhost:9200/artigos/_rank_eval?pretty" -H 'Content-Type: application/json' -d'
+{
+    "requests": [
+    {
+        "id": "JFK query",
+        "request": { "query" : {
+        "simple_query_string" : { 
+        	"query" : "(COGNITIVE^5) | (USABILITY^4) | (HCI^3) | (COMPUTING^2) | (PROGRAMMING^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }},
+        "ratings": [{ "_index": "artigos", "_id": "mQmxCnIBjJXsSiKISb7T", "rating": 1 }]
+    }],
+    "metric": {
+      "precision": {
+        "k" : 10,
+        "relevant_rating_threshold": 1,
+        "ignore_unlabeled": false
+      }
+   }
+}
+'
+
+###########TesteCarol.json (query_string e profile)
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "profile" : true,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(COGNITIVE^5) | (USABILITY^4) | (HCI^3) | (COMPUTING^2) | (PROGRAMMING^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+###########TesteCarol2.json (query_string e profile)
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "profile": true,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(COGNITIVE^5) || (USABILITY^4) || (HCI^3) || (COMPUTING^2) || (PROGRAMMING^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+###########Example of query_string
+curl -X GET "localhost:9200/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+    "query": {
+        "query_string" : {
+            "query" : "(new york city) OR (big apple)",
+            "default_field" : "content"
+        }
+    }
+}
+'
+############Example of Reescoring method
+curl -X POST "localhost:9200/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+   "query" : {
+      "match" : {
+         "message" : {
+            "operator" : "or",
+            "query" : "the quick brown"
+         }
+      }
+   },
+   "rescore" : {
+      "window_size" : 50,
+      "query" : {
+         "rescore_query" : {
+            "match_phrase" : {
+               "message" : {
+                  "query" : "the quick brown",
+                  "slop" : 2
+               }
+            }
+         },
+         "query_weight" : 0.7,
+         "rescore_query_weight" : 1.2
+      }
+   }
+}
+'
+
+###########TesteCarol3.json (ultimo termo não aparece nos resultados)
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size" : 4,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(COLLABORATIVE^1) | (BRAZILIAN^2) | (DATA^3) | (ACADEMIC^4) | (DESIGNERS^5)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+###########TesteCarol4.json (inverti a ordem para testar)
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size" : 200,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(PROGRAMMING^5) | (USABILITY^4) | (HCI^3) | (COMPUTING^2) | (COGNITIVE^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+
+###########TesteCarol4.json (outro caso de usuário,)
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size" : 200,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(VISUAL^5) | (SYSTEMS^4) | (COMPUTER^3) | (SYSTEMATIC^2) | (INSPECTION^1) ",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+##teste dos casos com pesos diferentes
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size" : 200,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(COGNITIVE^10) | (USABILITY^8) | (HCI^6) | (COMPUTING^4) | (PROGRAMMING^2)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'

@@ -1,0 +1,958 @@
+{
+  "took" : 57,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1974,
+      "relation" : "eq"
+    },
+    "max_score" : 23.684711,
+    "hits" : [
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "OgmxCnIBjJXsSiKIUM2C",
+        "_score" : 23.684711,
+        "_source" : {
+          "person_name" : "Kiemute Oyibo",
+          "paper_id" : 4864,
+          "paper_year" : 2016,
+          "paper_title" : "The Interplay of Aesthetics, Usability and Credibility in Mobile Websites and the Moderation by Culture",
+          "paper_abstract_EN" : "The relationships between aesthetics, usability and credibility have been widely investigated in human-computer interaction (HCI). However, in the mobile domain, limited empirical evidence exists showing the interplay among these three constructs and the role culture plays. To address this, we carried out a survey on four systematically designed mobile websites among 233 subjects from Canada and Nigeria, which belong to low- and high-context cultures respectively. Using path modeling, we investigated the relationships among the perceptions of these three HCI constructs and the possible differences that exist between the two cultures. Our results show: 1) it is the perception of aesthetics that predominantly drives the judgment of mobile web credibility at the global and subgroup levels, with the effect size being greater for the Canadian group than for the Nigerian group; 2) the direct effect of aesthetics on usability is moderated by culture, with the magnitude being stronger for the Nigerian group than for the Canadian group; and 3) our models explain 29-83% of the variance of credibility.",
+          "keyword" : "usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "QAmxCnIBjJXsSiKIUM2C",
+        "_score" : 23.684711,
+        "_source" : {
+          "person_name" : "Julita Vassileva",
+          "paper_id" : 4864,
+          "paper_year" : 2016,
+          "paper_title" : "The Interplay of Aesthetics, Usability and Credibility in Mobile Websites and the Moderation by Culture",
+          "paper_abstract_EN" : "The relationships between aesthetics, usability and credibility have been widely investigated in human-computer interaction (HCI). However, in the mobile domain, limited empirical evidence exists showing the interplay among these three constructs and the role culture plays. To address this, we carried out a survey on four systematically designed mobile websites among 233 subjects from Canada and Nigeria, which belong to low- and high-context cultures respectively. Using path modeling, we investigated the relationships among the perceptions of these three HCI constructs and the possible differences that exist between the two cultures. Our results show: 1) it is the perception of aesthetics that predominantly drives the judgment of mobile web credibility at the global and subgroup levels, with the effect size being greater for the Canadian group than for the Nigerian group; 2) the direct effect of aesthetics on usability is moderated by culture, with the magnitude being stronger for the Nigerian group than for the Canadian group; and 3) our models explain 29-83% of the variance of credibility.",
+          "keyword" : "usability"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "mgmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "Carlos Cristiano Carneiro",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "scalable vector graphics"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "mwmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "Carlos Cristiano Carneiro",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "svg"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "nAmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "Carlos Cristiano Carneiro",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "xml"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "nQmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "Carlos Cristiano Carneiro",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "zui"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "oQmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "José Bezerra da Silva Filho",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "scalable vector graphics"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "ogmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "José Bezerra da Silva Filho",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "svg"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "owmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "José Bezerra da Silva Filho",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "xml"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "pAmxCnIBjJXsSiKIScDZ",
+        "_score" : 20.480873,
+        "_source" : {
+          "person_name" : "José Bezerra da Silva Filho",
+          "paper_id" : 4600,
+          "paper_year" : 2002,
+          "paper_title" : "Scalable Vector Graphics como Ferramenta para Construção de Interfaces Baseadas em Zoom Contínuo",
+          "paper_abstract_EN" : "The challenge of building user interfaces to manipulate a wide range of\ninformation has motivated many researches aimed at proposing solutions based on\nzoom, such as Spacial Data Management System [1], Fisheye Views [2], Perspective Wall [3], Document Lens [4], Pad++[5], Jazz [8], Bifocal Display [6] and Flip Zooming [7].\nThe XML technology (Extensible Markup Language) has come consolidating, since its\nsprouting in 1997, as a standard for representing diverse forms of information. SVG in special is a standard based on XML for vetorial graphics representation in two dimensions. The main objective of this study is to confront the requirements of the interfaces based on zoom, called ZUIs, with SVG technology, in the direction of\ninvestigating the adequacy of the SVG use in the construction of this type of user interface.",
+          "keyword" : "zui"
+        }
+      }
+    ]
+  },
+  "profile" : {
+    "shards" : [
+      {
+        "id" : "[xRHwmIwHSyKgfBZ7j7FqAg][artigos][0]",
+        "searches" : [
+          {
+            "query" : [
+              {
+                "type" : "BooleanQuery",
+                "description" : "paper_title:cognitive paper_title:5 paper_abstract_EN:cognitive paper_abstract_EN:5 keyword:cognitive keyword:5 paper_title:usability paper_title:4 paper_abstract_EN:usability paper_abstract_EN:4 keyword:usability keyword:4 paper_title:hci paper_title:3 paper_abstract_EN:hci paper_abstract_EN:3 keyword:hci keyword:3 paper_title:computing paper_title:2 paper_abstract_EN:computing paper_abstract_EN:2 keyword:computing keyword:2 paper_title:programming paper_title:1 paper_abstract_EN:programming paper_abstract_EN:1 keyword:programming keyword:1",
+                "time_in_nanos" : 36519122,
+                "breakdown" : {
+                  "set_min_competitive_score_count" : 0,
+                  "match_count" : 1974,
+                  "shallow_advance_count" : 0,
+                  "set_min_competitive_score" : 0,
+                  "next_doc" : 12191753,
+                  "match" : 891921,
+                  "next_doc_count" : 1974,
+                  "score_count" : 1974,
+                  "compute_max_score_count" : 0,
+                  "compute_max_score" : 0,
+                  "advance" : 3990991,
+                  "advance_count" : 3,
+                  "score" : 4608188,
+                  "build_scorer_count" : 6,
+                  "create_weight" : 4943250,
+                  "shallow_advance" : 0,
+                  "create_weight_count" : 1,
+                  "build_scorer" : 9887087
+                },
+                "children" : [
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:cognitive",
+                    "time_in_nanos" : 763221,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 6,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 17,
+                      "compute_max_score_count" : 6,
+                      "compute_max_score" : 57956,
+                      "advance" : 9048,
+                      "advance_count" : 18,
+                      "score" : 14387,
+                      "build_scorer_count" : 5,
+                      "create_weight" : 547582,
+                      "shallow_advance" : 7703,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 126492
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:5",
+                    "time_in_nanos" : 64074,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 60952,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 3118
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:cognitive",
+                    "time_in_nanos" : 1462454,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 15,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 248,
+                      "compute_max_score_count" : 15,
+                      "compute_max_score" : 133695,
+                      "advance" : 208033,
+                      "advance_count" : 250,
+                      "score" : 160859,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 712549,
+                      "shallow_advance" : 51701,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 195081
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:5",
+                    "time_in_nanos" : 437458,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 4,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 12,
+                      "compute_max_score_count" : 4,
+                      "compute_max_score" : 15871,
+                      "advance" : 11618,
+                      "advance_count" : 13,
+                      "score" : 22811,
+                      "build_scorer_count" : 5,
+                      "create_weight" : 318444,
+                      "shallow_advance" : 6813,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 61862
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:cognitive",
+                    "time_in_nanos" : 305924,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 15,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 26,
+                      "compute_max_score_count" : 15,
+                      "compute_max_score" : 52551,
+                      "advance" : 15546,
+                      "advance_count" : 28,
+                      "score" : 36809,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 126374,
+                      "shallow_advance" : 17037,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 57515
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:5",
+                    "time_in_nanos" : 46217,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 44074,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2139
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:usability",
+                    "time_in_nanos" : 318170,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 15,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 63,
+                      "compute_max_score_count" : 15,
+                      "compute_max_score" : 34790,
+                      "advance" : 34129,
+                      "advance_count" : 65,
+                      "score" : 68494,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 115003,
+                      "shallow_advance" : 16711,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 48877
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:4",
+                    "time_in_nanos" : 29876,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 27462,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2410
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:usability",
+                    "time_in_nanos" : 5143381,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 22,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 701,
+                      "compute_max_score_count" : 22,
+                      "compute_max_score" : 195541,
+                      "advance" : 1089939,
+                      "advance_count" : 704,
+                      "score" : 846808,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 164458,
+                      "shallow_advance" : 75267,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2769909
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:4",
+                    "time_in_nanos" : 456899,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 13,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 68,
+                      "compute_max_score_count" : 13,
+                      "compute_max_score" : 33040,
+                      "advance" : 31543,
+                      "advance_count" : 70,
+                      "score" : 217885,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 89174,
+                      "shallow_advance" : 14805,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 70280
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:usability",
+                    "time_in_nanos" : 342190,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 20,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 70,
+                      "compute_max_score_count" : 20,
+                      "compute_max_score" : 47209,
+                      "advance" : 32467,
+                      "advance_count" : 73,
+                      "score" : 69097,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 109907,
+                      "shallow_advance" : 19589,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 63728
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:4",
+                    "time_in_nanos" : 43139,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 40002,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 3133
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:hci",
+                    "time_in_nanos" : 439086,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 18,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 129,
+                      "compute_max_score_count" : 18,
+                      "compute_max_score" : 42482,
+                      "advance" : 69398,
+                      "advance_count" : 132,
+                      "score" : 159594,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 91893,
+                      "shallow_advance" : 17657,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 57755
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:3",
+                    "time_in_nanos" : 28976,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 26075,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2897
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:hci",
+                    "time_in_nanos" : 2943904,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 20,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 643,
+                      "compute_max_score_count" : 20,
+                      "compute_max_score" : 183524,
+                      "advance" : 1815730,
+                      "advance_count" : 646,
+                      "score" : 575017,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 192227,
+                      "shallow_advance" : 81340,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 94727
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:3",
+                    "time_in_nanos" : 418054,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 18,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 141,
+                      "compute_max_score_count" : 18,
+                      "compute_max_score" : 46748,
+                      "advance" : 73388,
+                      "advance_count" : 144,
+                      "score" : 148022,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 77049,
+                      "shallow_advance" : 19729,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 52787
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:hci",
+                    "time_in_nanos" : 339351,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 20,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 73,
+                      "compute_max_score_count" : 20,
+                      "compute_max_score" : 52629,
+                      "advance" : 37194,
+                      "advance_count" : 76,
+                      "score" : 91066,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 89817,
+                      "shallow_advance" : 23328,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 45118
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:3",
+                    "time_in_nanos" : 40514,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 37899,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2611
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:computing",
+                    "time_in_nanos" : 175199,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 173326,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 1869
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:2",
+                    "time_in_nanos" : 39344,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 37447,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 1893
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:computing",
+                    "time_in_nanos" : 1192050,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 19,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 314,
+                      "compute_max_score_count" : 19,
+                      "compute_max_score" : 69843,
+                      "advance" : 561756,
+                      "advance_count" : 317,
+                      "score" : 162204,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 272567,
+                      "shallow_advance" : 60447,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 64554
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:2",
+                    "time_in_nanos" : 358831,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 16,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 119,
+                      "compute_max_score_count" : 16,
+                      "compute_max_score" : 38610,
+                      "advance" : 57088,
+                      "advance_count" : 122,
+                      "score" : 122546,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 79629,
+                      "shallow_advance" : 15845,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 44830
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:computing",
+                    "time_in_nanos" : 319811,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 17,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 45,
+                      "compute_max_score_count" : 17,
+                      "compute_max_score" : 43654,
+                      "advance" : 16592,
+                      "advance_count" : 48,
+                      "score" : 40914,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 142548,
+                      "shallow_advance" : 29491,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 46475
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:2",
+                    "time_in_nanos" : 50440,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 47667,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2769
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:programming",
+                    "time_in_nanos" : 259422,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 8,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 36,
+                      "compute_max_score_count" : 8,
+                      "compute_max_score" : 20042,
+                      "advance" : 13149,
+                      "advance_count" : 38,
+                      "score" : 23880,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 166650,
+                      "shallow_advance" : 6924,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 28679
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_title:1",
+                    "time_in_nanos" : 11371,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 8973,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2394
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:programming",
+                    "time_in_nanos" : 1381659,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 21,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 214,
+                      "compute_max_score_count" : 21,
+                      "compute_max_score" : 74987,
+                      "advance" : 827322,
+                      "advance_count" : 217,
+                      "score" : 176093,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 203654,
+                      "shallow_advance" : 36350,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 62770
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "paper_abstract_EN:1",
+                    "time_in_nanos" : 488570,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 19,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 149,
+                      "compute_max_score_count" : 19,
+                      "compute_max_score" : 54912,
+                      "advance" : 89991,
+                      "advance_count" : 152,
+                      "score" : 217061,
+                      "build_scorer_count" : 9,
+                      "create_weight" : 57450,
+                      "shallow_advance" : 19102,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 49705
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:programming",
+                    "time_in_nanos" : 381577,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 14,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 31,
+                      "compute_max_score_count" : 14,
+                      "compute_max_score" : 35591,
+                      "advance" : 152051,
+                      "advance_count" : 33,
+                      "score" : 31576,
+                      "build_scorer_count" : 7,
+                      "create_weight" : 115331,
+                      "shallow_advance" : 16141,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 30787
+                    }
+                  },
+                  {
+                    "type" : "TermQuery",
+                    "description" : "keyword:1",
+                    "time_in_nanos" : 10278,
+                    "breakdown" : {
+                      "set_min_competitive_score_count" : 0,
+                      "match_count" : 0,
+                      "shallow_advance_count" : 0,
+                      "set_min_competitive_score" : 0,
+                      "next_doc" : 0,
+                      "match" : 0,
+                      "next_doc_count" : 0,
+                      "score_count" : 0,
+                      "compute_max_score_count" : 0,
+                      "compute_max_score" : 0,
+                      "advance" : 0,
+                      "advance_count" : 0,
+                      "score" : 0,
+                      "build_scorer_count" : 3,
+                      "create_weight" : 7844,
+                      "shallow_advance" : 0,
+                      "create_weight_count" : 1,
+                      "build_scorer" : 2430
+                    }
+                  }
+                ]
+              }
+            ],
+            "rewrite_time" : 530607,
+            "collector" : [
+              {
+                "name" : "SimpleTopScoreDocCollector",
+                "reason" : "search_top_hits",
+                "time_in_nanos" : 8078450
+              }
+            ]
+          }
+        ],
+        "aggregations" : [ ]
+      }
+    ]
+  }
+}

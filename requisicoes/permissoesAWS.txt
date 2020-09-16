@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "es:*",
+      "Resource": "arn:aws:es:sa-east-1:662305654287:domain/sistemarecomendacao/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "179.223.164.22"
+        }
+      }
+    }
+  ]
+}

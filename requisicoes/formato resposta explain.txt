@@ -1,0 +1,279 @@
+Array ( 
+[_index] => artigos 
+[_type] => _doc 
+[_id] => vwmxCnIBjJXsSiKIT8h7 
+[matched] => 1 
+[explanation] => Array ( 
+	[value] => 42.2137 
+	[description] => sum of: 
+	[details] => Array ( 
+		[0] => Array ( 
+			[value] => 12.862137 
+			[description] => max of: 
+			[details] => Array ( 
+				[0] => Array ( 
+					[value] => 12.862137 
+					[description] => weight(paper_abstract_EN:cognitive in 1639) [PerFieldSimilarity], result of: 
+					[details] => Array ( 
+						[0] => Array ( 
+							[value] => 12.862137 
+							[description] => score(freq=1.0), computed as boost * idf * tf from: 
+							[details] => Array ( 
+								[0] => Array ( 
+									[value] => 11 
+									[description] => boost 
+									[details] => Array ( ) 
+								) 
+								[1] => Array ( 
+									[value] => 3.0019503 
+									[description] => idf, computed as log(1 + (N - n + 0.5) / (n + 0.5)) from: 
+									[details] => Array ( 
+										[0] => Array ( 
+											[value] => 248 [description] => n, number of documents containing term 
+											[details] => Array ( ) 
+										) 
+										[1] => Array ( 
+											[value] => 5000 [description] => N, total number of documents with field 
+											[details] => Array ( ) 
+										) 
+									) 
+								) 
+								[2] => Array ( 
+								[value] => 0.3895085 
+								[description] => tf, computed as freq / (freq + k1 * (1 - b + b * dl / avgdl)) from: 
+								[details] => Array ( 
+									[0] => Array ( 
+										[value] => 1 
+										[description] => freq, occurrences of term within document [details] => Array ( ) 
+									) 
+									[1] => Array ( 
+										[value] => 1.2 
+										[description] => k1, term saturation parameter 
+										[details] => Array ( ) 
+									) 
+									[2] => Array ( 
+										[value] => 0.75 
+										[description] => b, length normalization parameter 
+										[details] => Array ( ) 
+									) 
+									[3] => Array ( 
+										[value] => 168 
+										[description] => dl, length of field (approximate) 
+										[details] => Array ( ) 
+									) 
+									[4] => Array ( 
+										[value] => 119.3052 
+										[description] => avgdl, average length of field [details] => Array ( ) 
+									) 
+								) 
+							) 
+						) 
+					) 
+				) 
+			) 
+		) 
+	) 
+	[1] => Array ( 
+		[value] => 21.764332 
+		[description] => max of: 
+		[details] => Array ( 
+			[0] => Array ( 
+				[value] => 6.732544 
+				[description] => weight(paper_abstract_EN:usability in 1639) [PerFieldSimilarity], result of: 
+				[details] => Array ( 
+					[0] => Array ( 
+						[value] => 6.732544 
+						[description] => score(freq=1.0), computed as boost * idf * tf from: 
+						[details] => Array ( 
+							[0] => Array ( 
+								[value] => 8.8 
+								[description] => boost 
+								[details] => Array ( ) 
+							) 
+							[1] => Array ( 
+								[value] => 1.9641722 
+								[description] => idf, computed as log(1 + (N - n + 0.5) / (n + 0.5)) from: 
+								[details] => Array ( 
+									[0] => Array ( 
+										[value] => 701 
+										[description] => n, number of documents containing term 
+										[details] => Array ( ) 
+									) 
+									[1] => Array ( 
+										[value] => 5000 
+										[description] => N, total number of documents with field 
+										[details] => Array ( ) 
+									) 
+								) 
+							) 
+							[2] => Array ( 
+								[value] => 0.3895085 
+								[description] => tf, computed as freq / (freq + k1 * (1 - b + b * dl / avgdl)) from: 
+								[details] => Array ( 
+									[0] => Array ( 
+										[value] => 1 
+										[description] => freq, occurrences of term within document 
+										[details] => Array ( ) 
+									) 
+									[1] => Array ( 
+										[value] => 1.2 
+										[description] => k1, term saturation parameter 
+										[details] => Array ( ) 
+									) 
+									[2] => Array ( 
+										[value] => 0.75 
+										[description] => b, length normalization parameter [details] => Array ( ) 
+									) 
+									[3] => Array ( 
+										[value] => 168 
+										[description] => dl, length of field (approximate) [details] => Array ( ) 
+									) 
+									[4] => Array ( 
+										[value] => 119.3052 
+										[description] => avgdl, average length of field 
+										[details] => Array ( ) 
+									) 
+								) 
+							) 
+
+						) 
+					) 
+				) 
+			) 
+			[1] => Array ( 
+				[value] => 21.764332 
+				[description] => weight(keyword:usability in 1639) [PerFieldSimilarity], result of: 
+				[details] => Array ( 
+					[0] => Array ( 
+						[value] => 21.764332 
+						[description] => score(freq=1.0), computed as boost * idf * tf from: 
+						[details] => Array ( 
+							[0] => Array ( 
+								[value] => 8.8 
+								[description] => boost 
+								[details] => Array ( ) 
+							) 
+							[1] => Array ( 
+								[value] => 4.2617803 
+								[description] => idf, computed as log(1 + (N - n + 0.5) / (n + 0.5)) from: 
+								[details] => Array ( 
+									[0] => Array ( 
+										[value] => 70 [description] => n, number of documents containing term 
+										[details] => Array ( ) 
+									) 
+									[1] => Array ( 
+										[value] => 5000 
+										[description] => N, total number of documents with field 
+										[details] => Array ( ) 
+									) 
+								) 
+							) 
+							[2] => Array ( 
+								[value] => 0.5803255 
+								[description] => tf, computed as freq / (freq + k1 * (1 - b + b * dl / avgdl)) from: 
+								[details] => Array ( 
+									[0] => Array ( 
+										[value] => 1 
+										[description] => freq, occurrences of term within document 
+										[details] => Array ( ) 
+									) 
+									[1] => Array ( 
+										[value] => 1.2 
+										[description] => k1, term saturation parameter 
+										[details] => Array ( ) 
+									) 
+									[2] => Array ( 
+										[value] => 0.75 
+										[description] => b, length normalization parameter 
+										[details] => Array ( ) 
+									) 
+									[3] => Array ( 
+										[value] => 1 
+										[description] => dl, length of field 
+										[details] => Array ( ) 
+									) 
+									[4] => Array ( 
+										[value] => 2.1268 
+										[description] => avgdl, average length of field 
+										[details] => Array ( ) 
+									) 
+								) 
+							) 
+						) 
+					) 
+				) 
+			) 
+		) 
+	) 
+	[2] => Array ( 
+		[value] => 7.5872316 
+		[description] => max of: 
+		[details] => Array ( 
+			[0] => Array ( 
+				[value] => 7.5872316 
+				[description] => weight(paper_abstract_EN:hci in 1639) [PerFieldSimilarity], result of: 
+				[details] => Array ( 
+					[0] => Array ( 
+						[value] => 7.5872316 
+						[description] => score(freq=2.0), computed as boost * idf * tf from: 
+						[details] => Array ( 
+							[0] => Array ( 
+								[value] => 6.6000004 
+								[description] => boost 
+								[details] => Array ( ) 
+							) 
+							[1] => Array ( 
+								[value] => 2.050471 
+								[description] => idf, computed as log(1 + (N - n + 0.5) / (n + 0.5)) from: 
+								[details] => Array ( 
+									[0] => Array ( 
+									[value] => 643 
+									[description] => n, number of documents containing term 
+									[details] => Array ( ) 
+								) 
+								[1] => Array ( 
+									[value] => 5000 
+									[description] => N, total number of documents with field 
+									[details] => Array ( ) 
+								) 
+							) 
+						) 
+						[2] => Array ( 
+							[value] => 0.5606421 
+							[description] => tf, computed as freq / (freq + k1 * (1 - b + b * dl / avgdl)) from: 
+							[details] => Array ( 
+								[0] => Array ( 
+									[value] => 2 
+									[description] => freq, occurrences of term within document 
+									[details] => Array ( ) 
+								) 
+								[1] => Array ( 
+									[value] => 1.2 
+									[description] => k1, term saturation parameter 	
+									[details] => Array ( ) 
+								) 
+								[2] => Array ( 
+									[value] => 0.75 
+									[description] => b, length normalization parameter 
+									[details] => Array ( ) 
+								) 
+								[3] => Array ( 
+									[value] => 168 
+									[description] => dl, length of field (approximate) 
+									[details] => Array ( ) 
+								) 
+								[4] => Array ( 
+									[value] => 119.3052 
+									[description] => avgdl, average length of field [details] => Array ( ) 
+								) 
+							) 
+						) 
+					) 
+				) 
+			) 
+		) 
+	) 
+) 
+) 
+) 
+)

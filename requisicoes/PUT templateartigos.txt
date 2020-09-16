@@ -1,0 +1,30 @@
+PUT _template/artigos
+{
+  "index_patterns": ["artigo*"],
+  "template": {
+    "mappings": {
+      "properties": {
+        "keyword": {
+      "type": "text"
+       },
+      "paper_abstract_EN": {
+      "type": "text"
+      },
+      "paper_id": {
+        "type": "long"
+      },
+      "paper_title": {
+        "type": "text"
+      },
+      "paper_year": {
+        "type": "long"
+      },
+      "person_name": {
+        "type": "keyword"
+      }
+      }
+    }
+  }
+}
+ 
+ 

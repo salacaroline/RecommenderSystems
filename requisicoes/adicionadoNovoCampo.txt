@@ -1,0 +1,9 @@
+POST /usuarios/_mapping?pretty
+{
+  "properties": {
+    "conhecoIHC": {
+      "type": "text",
+      "index": false
+    }
+  }
+}

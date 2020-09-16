@@ -1,0 +1,9 @@
+es2csv -u http://search-sistemarecomendacao-n4nryark2nid6lbezhlvlm3imm.sa-east-1.es.amazonaws.com:80 -i artigos -o artigos2020.csv -q '*' --debug
+
+https://pypi.org/project/es2csv/1.0.3/
+
+https://stackoverflow.com/questions/55860531/how-to-export-data-from-aws-elasticsearch-domain-into-a-csv-file
+
+https://github.com/taraslayshchuk/es2csv
+
+https://github.com/dkoneill/es2csv/blob/issue74/es2csv.py

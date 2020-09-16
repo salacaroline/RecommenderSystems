@@ -1,0 +1,44 @@
+###########Example of explain
+curl -X GET "localhost:9200/artigos/_explain/qAmxCnIBjJXsSiKIUc6A?pretty" -H 'Content-Type: application/json' -d'
+{
+      "query" : {
+        "query_string" : { 
+        	"query" : "(COMPUTING^5) | (TECHNIQUES^4) | (METHOD^3) | (EXPRESSION^4) | (SATISFACTION^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+      }
+}
+'
+
+
+###########TesteCarol3.json (ultimo termo não aparece nos resultados)
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size" : 4,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(COLLABORATIVE^1) | (BRAZILIAN^2) | (DATA^3) | (DESIGNERS^4) | (ACADEMIC^5)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+
+curl -X GET "localhost:9200/artigos/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size" : 100,
+  "query" : {
+        "query_string" : { 
+        	"query" : "(COMPUTING^5) | (TECHNIQUES^4) | (METHOD^3) | (EXPRESSION^4) | (SATISFACTION^1)",
+        	"fields" : ["paper_title", "paper_abstract_EN", "keyword"],
+        	"default_operator" : "or"
+         }
+   }
+}
+'
+
+
+
+    	

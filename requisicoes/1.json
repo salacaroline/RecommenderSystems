@@ -1,0 +1,719 @@
+{
+  "took" : 52,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 2096,
+      "relation" : "eq"
+    },
+    "max_score" : 36.480255,
+    "hits" : [
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "pwmxCnIBjJXsSiKIUMuB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Luiz Gustavo de Souza",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "design language"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "qAmxCnIBjJXsSiKIUMuB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Luiz Gustavo de Souza",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "interaction design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "qQmxCnIBjJXsSiKIUMuB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Luiz Gustavo de Souza",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "molic"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "bwmxCnIBjJXsSiKIUMyB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Simone D. J. Barbosa",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "design language"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "cAmxCnIBjJXsSiKIUMyB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Simone D. J. Barbosa",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "interaction design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "cQmxCnIBjJXsSiKIUMyB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Simone D. J. Barbosa",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "molic"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "hgmxCnIBjJXsSiKIUMyB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Tayana Conte",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "design language"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "hwmxCnIBjJXsSiKIUMyB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Tayana Conte",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "interaction design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "iAmxCnIBjJXsSiKIUMyB",
+        "_score" : 36.480255,
+        "_source" : {
+          "person_name" : "Tayana Conte",
+          "paper_id" : 4818,
+          "paper_year" : 2015,
+          "paper_title" : "Evaluating a MoLIC Extension for Collaborative Systems Design",
+          "paper_abstract_EN" : "Collaborative Systems go beyond user-system interaction, allowing users to cooperate, coordinate and communicate with each other through the system. This kind of system has brought new issues and challenges for research in several fields, including interaction design, as many works proposed ways to facilitate the process of designing for collaboration. To support model-based design for collaborative systems, we propose an extension for the Modeling Language for Interaction as Conversation (MoLIC), allowing designers to represent user influences, cooperative tasks and awareness mechanisms to design collaboration. In this paper, we present a case study to evaluate the MoLIC extension during interpretation and design tasks applied with 12 undergraduate students. Results points to a good acceptance of the extension, but defects introduced in the models indicate that some concepts were not very easy to understand as presented to participants.",
+          "keyword" : "molic"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "YgmxCnIBjJXsSiKIUM2C",
+        "_score" : 33.969604,
+        "_source" : {
+          "person_name" : "Wilmax Marreiro Cruz",
+          "paper_id" : 4868,
+          "paper_year" : 2016,
+          "paper_title" : "Interface para auxiliar cuidadores no registro diário e visualização de informações de pacientes com demência",
+          "paper_abstract_EN" : "Nowadays, there has been a continual increase in life expectancy in almost all countries of the world and the number of elderly people has grown considerably. However, the number of professional support (e.g. caregivers) to people with dementia is not growing proportionally. One of the possible ways to ease the overburden of these professionals is to use technological tools. In this scenario, the goal of this paper is to identify the real needs of these users, and propose an application called Day2Day who could understand such needs. A questionnaire was applied to 17 professionals who evaluated the tool and the use of information visualization techniques in this context. Further the results indicate that the information visualization techniques enable the development of more intuitive interfaces, enabling the collection of data more quickly.",
+          "keyword" : "Collaborative Systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "ZgmxCnIBjJXsSiKIUM2C",
+        "_score" : 33.969604,
+        "_source" : {
+          "person_name" : "Seiji Isotani",
+          "paper_id" : 4868,
+          "paper_year" : 2016,
+          "paper_title" : "Interface para auxiliar cuidadores no registro diário e visualização de informações de pacientes com demência",
+          "paper_abstract_EN" : "Nowadays, there has been a continual increase in life expectancy in almost all countries of the world and the number of elderly people has grown considerably. However, the number of professional support (e.g. caregivers) to people with dementia is not growing proportionally. One of the possible ways to ease the overburden of these professionals is to use technological tools. In this scenario, the goal of this paper is to identify the real needs of these users, and propose an application called Day2Day who could understand such needs. A questionnaire was applied to 17 professionals who evaluated the tool and the use of information visualization techniques in this context. Further the results indicate that the information visualization techniques enable the development of more intuitive interfaces, enabling the collection of data more quickly.",
+          "keyword" : "Collaborative Systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "agmxCnIBjJXsSiKIUM2C",
+        "_score" : 33.969604,
+        "_source" : {
+          "person_name" : "Luís Carriço",
+          "paper_id" : 4868,
+          "paper_year" : 2016,
+          "paper_title" : "Interface para auxiliar cuidadores no registro diário e visualização de informações de pacientes com demência",
+          "paper_abstract_EN" : "Nowadays, there has been a continual increase in life expectancy in almost all countries of the world and the number of elderly people has grown considerably. However, the number of professional support (e.g. caregivers) to people with dementia is not growing proportionally. One of the possible ways to ease the overburden of these professionals is to use technological tools. In this scenario, the goal of this paper is to identify the real needs of these users, and propose an application called Day2Day who could understand such needs. A questionnaire was applied to 17 professionals who evaluated the tool and the use of information visualization techniques in this context. Further the results indicate that the information visualization techniques enable the development of more intuitive interfaces, enabling the collection of data more quickly.",
+          "keyword" : "Collaborative Systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "bgmxCnIBjJXsSiKIUM2C",
+        "_score" : 33.969604,
+        "_source" : {
+          "person_name" : "Tiago Guerreiro",
+          "paper_id" : 4868,
+          "paper_year" : 2016,
+          "paper_title" : "Interface para auxiliar cuidadores no registro diário e visualização de informações de pacientes com demência",
+          "paper_abstract_EN" : "Nowadays, there has been a continual increase in life expectancy in almost all countries of the world and the number of elderly people has grown considerably. However, the number of professional support (e.g. caregivers) to people with dementia is not growing proportionally. One of the possible ways to ease the overburden of these professionals is to use technological tools. In this scenario, the goal of this paper is to identify the real needs of these users, and propose an application called Day2Day who could understand such needs. A questionnaire was applied to 17 professionals who evaluated the tool and the use of information visualization techniques in this context. Further the results indicate that the information visualization techniques enable the development of more intuitive interfaces, enabling the collection of data more quickly.",
+          "keyword" : "Collaborative Systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "PQmxCnIBjJXsSiKIUdGC",
+        "_score" : 31.611841,
+        "_source" : {
+          "person_name" : "Bernardo Alves Villarinho Lima",
+          "paper_id" : 4939,
+          "paper_year" : 2018,
+          "paper_title" : "A Participatory Method for Multidimensional Analysis and\nProposing Improvements in Collaborative Systems",
+          "paper_abstract_EN" : "The difficulty of evaluating collaborative systems is a historical challenge,\nsince the multiple dimensions of collaboration are considered\nsuccess factors for the system, and these factors go beyond individual\ninteraction. Adopting the fundamentals of Participatory Design, this\npaper presents a multidimensional method for evaluating and proposing\nimprovements on collaborative systems. The method involves\nthree phases: (1) a presential briefing phase; (2) a non-presential\nobservation phase; and (3) a Future Workshop phase. Instances of\nthe proposed method seek to involve users as co-designers, making\ninformed and relevant decisions about the future of a system\nwhich they could learn and use. This paper also presents the results\nof a preliminary evaluation, which consists in an instance of the\nmethod: evaluating and proposing improvements on a groupware\nprototype. The instance is compared to a traditional groupware evaluation\nmethod, exposing that the instance, not only identified similar\ncollaboration-related issues, but also identified issues that were not\nidentified by the inspection. During the experiment, participants informed\nus about issues experienced while collaborating and how they\nwere perceived, and elicited possible futures in which the system\nwould have more value to their objectives.",
+          "keyword" : "Participatory Design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "PgmxCnIBjJXsSiKIUdGC",
+        "_score" : 31.611841,
+        "_source" : {
+          "person_name" : "Bernardo Alves Villarinho Lima",
+          "paper_id" : 4939,
+          "paper_year" : 2018,
+          "paper_title" : "A Participatory Method for Multidimensional Analysis and\nProposing Improvements in Collaborative Systems",
+          "paper_abstract_EN" : "The difficulty of evaluating collaborative systems is a historical challenge,\nsince the multiple dimensions of collaboration are considered\nsuccess factors for the system, and these factors go beyond individual\ninteraction. Adopting the fundamentals of Participatory Design, this\npaper presents a multidimensional method for evaluating and proposing\nimprovements on collaborative systems. The method involves\nthree phases: (1) a presential briefing phase; (2) a non-presential\nobservation phase; and (3) a Future Workshop phase. Instances of\nthe proposed method seek to involve users as co-designers, making\ninformed and relevant decisions about the future of a system\nwhich they could learn and use. This paper also presents the results\nof a preliminary evaluation, which consists in an instance of the\nmethod: evaluating and proposing improvements on a groupware\nprototype. The instance is compared to a traditional groupware evaluation\nmethod, exposing that the instance, not only identified similar\ncollaboration-related issues, but also identified issues that were not\nidentified by the inspection. During the experiment, participants informed\nus about issues experienced while collaborating and how they\nwere perceived, and elicited possible futures in which the system\nwould have more value to their objectives.",
+          "keyword" : "Computer-Supported Cooperative Work"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "PwmxCnIBjJXsSiKIUdGC",
+        "_score" : 31.611841,
+        "_source" : {
+          "person_name" : "Leonelo Dell Anhol Almeida",
+          "paper_id" : 4939,
+          "paper_year" : 2018,
+          "paper_title" : "A Participatory Method for Multidimensional Analysis and\nProposing Improvements in Collaborative Systems",
+          "paper_abstract_EN" : "The difficulty of evaluating collaborative systems is a historical challenge,\nsince the multiple dimensions of collaboration are considered\nsuccess factors for the system, and these factors go beyond individual\ninteraction. Adopting the fundamentals of Participatory Design, this\npaper presents a multidimensional method for evaluating and proposing\nimprovements on collaborative systems. The method involves\nthree phases: (1) a presential briefing phase; (2) a non-presential\nobservation phase; and (3) a Future Workshop phase. Instances of\nthe proposed method seek to involve users as co-designers, making\ninformed and relevant decisions about the future of a system\nwhich they could learn and use. This paper also presents the results\nof a preliminary evaluation, which consists in an instance of the\nmethod: evaluating and proposing improvements on a groupware\nprototype. The instance is compared to a traditional groupware evaluation\nmethod, exposing that the instance, not only identified similar\ncollaboration-related issues, but also identified issues that were not\nidentified by the inspection. During the experiment, participants informed\nus about issues experienced while collaborating and how they\nwere perceived, and elicited possible futures in which the system\nwould have more value to their objectives.",
+          "keyword" : "Participatory Design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "QAmxCnIBjJXsSiKIUdGC",
+        "_score" : 31.611841,
+        "_source" : {
+          "person_name" : "Leonelo Dell Anhol Almeida",
+          "paper_id" : 4939,
+          "paper_year" : 2018,
+          "paper_title" : "A Participatory Method for Multidimensional Analysis and\nProposing Improvements in Collaborative Systems",
+          "paper_abstract_EN" : "The difficulty of evaluating collaborative systems is a historical challenge,\nsince the multiple dimensions of collaboration are considered\nsuccess factors for the system, and these factors go beyond individual\ninteraction. Adopting the fundamentals of Participatory Design, this\npaper presents a multidimensional method for evaluating and proposing\nimprovements on collaborative systems. The method involves\nthree phases: (1) a presential briefing phase; (2) a non-presential\nobservation phase; and (3) a Future Workshop phase. Instances of\nthe proposed method seek to involve users as co-designers, making\ninformed and relevant decisions about the future of a system\nwhich they could learn and use. This paper also presents the results\nof a preliminary evaluation, which consists in an instance of the\nmethod: evaluating and proposing improvements on a groupware\nprototype. The instance is compared to a traditional groupware evaluation\nmethod, exposing that the instance, not only identified similar\ncollaboration-related issues, but also identified issues that were not\nidentified by the inspection. During the experiment, participants informed\nus about issues experienced while collaborating and how they\nwere perceived, and elicited possible futures in which the system\nwould have more value to their objectives.",
+          "keyword" : "Computer-Supported Cooperative Work"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "igmxCnIBjJXsSiKIT8d7",
+        "_score" : 31.186432,
+        "_source" : {
+          "person_name" : "Isabela Gasparini",
+          "paper_id" : 4766,
+          "paper_year" : 2013,
+          "paper_title" : "Visualizando 15 anos de IHC",
+          "paper_abstract_EN" : "This paper presents a visual exploration of the field of Human Computer Interaction in Brazil from a fifteen-year analysis of paper production in Brazilian Symposium on Human Factors in Computing Systems (IHC). Our analysis is based on data-driven visual exploration, and it can help to get insights from the data and identify topics evolution, central authors and institutions, and important trends.",
+          "keyword" : "brazilian symposium"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "jgmxCnIBjJXsSiKIT8d7",
+        "_score" : 31.186432,
+        "_source" : {
+          "person_name" : "Isabela Gasparini",
+          "paper_id" : 4766,
+          "paper_year" : 2013,
+          "paper_title" : "Visualizando 15 anos de IHC",
+          "paper_abstract_EN" : "This paper presents a visual exploration of the field of Human Computer Interaction in Brazil from a fifteen-year analysis of paper production in Brazilian Symposium on Human Factors in Computing Systems (IHC). Our analysis is based on data-driven visual exploration, and it can help to get insights from the data and identify topics evolution, central authors and institutions, and important trends.",
+          "keyword" : "brazilian symposium"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "vAmxCnIBjJXsSiKIT8d7",
+        "_score" : 31.186432,
+        "_source" : {
+          "person_name" : "Marcelo Soares Pimenta",
+          "paper_id" : 4766,
+          "paper_year" : 2013,
+          "paper_title" : "Visualizando 15 anos de IHC",
+          "paper_abstract_EN" : "This paper presents a visual exploration of the field of Human Computer Interaction in Brazil from a fifteen-year analysis of paper production in Brazilian Symposium on Human Factors in Computing Systems (IHC). Our analysis is based on data-driven visual exploration, and it can help to get insights from the data and identify topics evolution, central authors and institutions, and important trends.",
+          "keyword" : "brazilian symposium"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "wwmxCnIBjJXsSiKIT8d7",
+        "_score" : 31.186432,
+        "_source" : {
+          "person_name" : "Marcos H. Kimura",
+          "paper_id" : 4766,
+          "paper_year" : 2013,
+          "paper_title" : "Visualizando 15 anos de IHC",
+          "paper_abstract_EN" : "This paper presents a visual exploration of the field of Human Computer Interaction in Brazil from a fifteen-year analysis of paper production in Brazilian Symposium on Human Factors in Computing Systems (IHC). Our analysis is based on data-driven visual exploration, and it can help to get insights from the data and identify topics evolution, central authors and institutions, and important trends.",
+          "keyword" : "brazilian symposium"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "KwmxCnIBjJXsSiKITMPb",
+        "_score" : 30.419247,
+        "_source" : {
+          "person_name" : "Raquel Oliveira Prates",
+          "paper_id" : 4643,
+          "paper_year" : 2008,
+          "paper_title" : "Avaliação da Manas na Identificação de Problemas de Impacto Social: Um Estudo de Caso",
+          "paper_abstract_EN" : "Success of collaborative systems is closely related to its social impact on users. Manas is one of the few available proposals that aim at supporting designers of collaborative systems to take the social impact of their decisions into consideration during design. In this paper we present an evaluation of Manas. The case study conducted shows that Manas is able to point out real social problems caused by a collaborative system. It also provided indicators on the expressivity of Manas design language",
+          "keyword" : "collaborative systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "PgmxCnIBjJXsSiKITMPb",
+        "_score" : 30.419247,
+        "_source" : {
+          "person_name" : "Rodrigo Ferreira da Silva",
+          "paper_id" : 4643,
+          "paper_year" : 2008,
+          "paper_title" : "Avaliação da Manas na Identificação de Problemas de Impacto Social: Um Estudo de Caso",
+          "paper_abstract_EN" : "Success of collaborative systems is closely related to its social impact on users. Manas is one of the few available proposals that aim at supporting designers of collaborative systems to take the social impact of their decisions into consideration during design. In this paper we present an evaluation of Manas. The case study conducted shows that Manas is able to point out real social problems caused by a collaborative system. It also provided indicators on the expressivity of Manas design language",
+          "keyword" : "collaborative systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "3wmxCnIBjJXsSiKIUc2A",
+        "_score" : 29.964573,
+        "_source" : {
+          "person_name" : "Mary Beth Rosson",
+          "paper_id" : 4878,
+          "paper_year" : 2016,
+          "paper_title" : "Analysis of Configuration Decision Space Over Time: The Google Inactive Manager Account Case",
+          "paper_abstract_EN" : "Some configuration settings have immediate impact on system state; others have impact over time. In group systems, the timeline of impacts can be even more complex, because changes may impact not only the user who made them but also other users. When a system is designed, its designers plan what configuration settings to provide users with, as well as how these settings will affect the system and when. They must also help users anticipate how these settings impact the available interactive paths over time, so that users can make informed decisions about their settings. In this paper we show how two analytical tools – the Semiotic Inspection Method (SIM) and the Configurable Interaction Anticipation Challenges (CIAC) – can be combined to probe the complexity of decisions that users may take in during a configuration task. We take Google Inactive Account Manager as our case, since all the decisions involved relate to future effects.",
+          "keyword" : "collaborative systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "5AmxCnIBjJXsSiKIUc2A",
+        "_score" : 29.964573,
+        "_source" : {
+          "person_name" : "Clarisse S. de Souza",
+          "paper_id" : 4878,
+          "paper_year" : 2016,
+          "paper_title" : "Analysis of Configuration Decision Space Over Time: The Google Inactive Manager Account Case",
+          "paper_abstract_EN" : "Some configuration settings have immediate impact on system state; others have impact over time. In group systems, the timeline of impacts can be even more complex, because changes may impact not only the user who made them but also other users. When a system is designed, its designers plan what configuration settings to provide users with, as well as how these settings will affect the system and when. They must also help users anticipate how these settings impact the available interactive paths over time, so that users can make informed decisions about their settings. In this paper we show how two analytical tools – the Semiotic Inspection Method (SIM) and the Configurable Interaction Anticipation Challenges (CIAC) – can be combined to probe the complexity of decisions that users may take in during a configuration task. We take Google Inactive Account Manager as our case, since all the decisions involved relate to future effects.",
+          "keyword" : "collaborative systems"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "LAmxCnIBjJXsSiKIUMuB",
+        "_score" : 29.476772,
+        "_source" : {
+          "person_name" : "Geraldo Gomes da Cruz Júnior",
+          "paper_id" : 4837,
+          "paper_year" : 2015,
+          "paper_title" : "Desenvolvimento de um aplicativo educativo utilizando o Toolkit HCD e dados abertos sobre a cultura recifense",
+          "paper_abstract_EN" : "This paper presents the Human-Centered Design process (HCD) applied in the context of educational games using open data about cultural aspects of the city of Recife. The main objective of the work is the collaborative development of an application for smartphones, entitled \\\"Recife Games\\\", which provides an entertaining way to learn about Recife culture. The methodology for the application development was based on the HCD Toolkit and Jakob Nielsen’s usability criteria and heuristics. We also used two interaction design techniques, Skeumorfism and Flat Design. The work includes the steps proposed in the human centered design, starting with the specification of a strategic challenge and the following three main phases: Listen, Create and Deploy. Finally, we present statistics related to the application usage on Android platform, that shown relevant user acceptance of \\\"Recife Games\\\".",
+          "keyword" : "open data"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "OwmxCnIBjJXsSiKIUMyB",
+        "_score" : 29.476772,
+        "_source" : {
+          "person_name" : "Roberta Macêdo Marques Gouveia",
+          "paper_id" : 4837,
+          "paper_year" : 2015,
+          "paper_title" : "Desenvolvimento de um aplicativo educativo utilizando o Toolkit HCD e dados abertos sobre a cultura recifense",
+          "paper_abstract_EN" : "This paper presents the Human-Centered Design process (HCD) applied in the context of educational games using open data about cultural aspects of the city of Recife. The main objective of the work is the collaborative development of an application for smartphones, entitled \\\"Recife Games\\\", which provides an entertaining way to learn about Recife culture. The methodology for the application development was based on the HCD Toolkit and Jakob Nielsen’s usability criteria and heuristics. We also used two interaction design techniques, Skeumorfism and Flat Design. The work includes the steps proposed in the human centered design, starting with the specification of a strategic challenge and the following three main phases: Listen, Create and Deploy. Finally, we present statistics related to the application usage on Android platform, that shown relevant user acceptance of \\\"Recife Games\\\".",
+          "keyword" : "open data"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "sAmxCnIBjJXsSiKIUMyB",
+        "_score" : 29.476772,
+        "_source" : {
+          "person_name" : "Victor W. Costa de Medeiros",
+          "paper_id" : 4837,
+          "paper_year" : 2015,
+          "paper_title" : "Desenvolvimento de um aplicativo educativo utilizando o Toolkit HCD e dados abertos sobre a cultura recifense",
+          "paper_abstract_EN" : "This paper presents the Human-Centered Design process (HCD) applied in the context of educational games using open data about cultural aspects of the city of Recife. The main objective of the work is the collaborative development of an application for smartphones, entitled \\\"Recife Games\\\", which provides an entertaining way to learn about Recife culture. The methodology for the application development was based on the HCD Toolkit and Jakob Nielsen’s usability criteria and heuristics. We also used two interaction design techniques, Skeumorfism and Flat Design. The work includes the steps proposed in the human centered design, starting with the specification of a strategic challenge and the following three main phases: Listen, Create and Deploy. Finally, we present statistics related to the application usage on Android platform, that shown relevant user acceptance of \\\"Recife Games\\\".",
+          "keyword" : "open data"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "DwmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Alberto Barbosa Raposo",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "autismo"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "EAmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Alberto Barbosa Raposo",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "jogos colaborativos"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "EQmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Alberto Barbosa Raposo",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "cultura e ihc"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "EgmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Alberto Barbosa Raposo",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "eAmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Greis F. Mireya Silva",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "autismo"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "eQmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Greis F. Mireya Silva",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "jogos colaborativos"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "egmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Greis F. Mireya Silva",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "cultura e ihc"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "ewmxCnIBjJXsSiKIT8d6",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Greis F. Mireya Silva",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "qQmxCnIBjJXsSiKIT8d7",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Luciana Cardoso de Castro Salgado",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "autismo"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "qgmxCnIBjJXsSiKIT8d7",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Luciana Cardoso de Castro Salgado",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "jogos colaborativos"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "qwmxCnIBjJXsSiKIT8d7",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Luciana Cardoso de Castro Salgado",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "cultura e ihc"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "rAmxCnIBjJXsSiKIT8d7",
+        "_score" : 28.960625,
+        "_source" : {
+          "person_name" : "Luciana Cardoso de Castro Salgado",
+          "paper_id" : 4753,
+          "paper_year" : 2013,
+          "paper_title" : "Metáforas de Perspectivas Culturais na (re) definição de padrões de colaboração de um jogo de multi-toque para usuários com autismo",
+          "paper_abstract_EN" : "We conceived \"collaboration patterns\" as interaction restrictive strategies with objects in a collaborative interface to force/encourage the collaboration among users with autism. Initially, we designed collaboration patterns in the collaborative multi-touch game PAR (Acronym in Portuguese for Ask, Help, Receive) based on the requirements of a group of Brazilian users with autism. In the empirical study of PAR, we identified the need to improve the characteristics of these collaboration patterns to facilitate gradually the adoption of collaborative mechanisms of the game by the users. We conduct, therefore, this qualitative study to inspect the intercultural experience promoted by PAR in light of Cultural Viewpoint Metaphors (CVM), a conceptual tool. We present the evaluation (by inspection) of the current intercultural situation of the PAR, the identification of new features and finally the (re) definition of collaboration patterns with collaborative intercultural features intended for users with autism.",
+          "keyword" : "design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "sgmxCnIBjJXsSiKIUMuB",
+        "_score" : 28.372282,
+        "_source" : {
+          "person_name" : "Manoel Pereira Junior",
+          "paper_id" : 4836,
+          "paper_year" : 2015,
+          "paper_title" : "Um Modelo para Apoiar Designers de Sistemas Colaborativos na Antecipação de Cenários",
+          "paper_abstract_EN" : "Nowadays collaborative systems often present users with flexibility to customize different aspects according to their contexts or needs. Designers of these systems must define the possible customizations to be offered to users at design time. To do so, they have to decide what choices to make available to users, and consider which scenarios may be generated by users’ decisions and their impact over time in other users’ interactions. In this paper, we propose a modeling language that supports designers in this activity by allowing them to describe users’ choices and actions over time and their impacts. Based on this description a scenario generator describes the situations that users can create by their choices. Exploring the scenarios generated at design time, the designer can inspect if any of the scenarios represent undesirable situations for end users. A preliminary evaluation of the model is presented and discussed",
+          "keyword" : "collaborative systems design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "HAmxCnIBjJXsSiKIUMyB",
+        "_score" : 28.372282,
+        "_source" : {
+          "person_name" : "Raquel Oliveira Prates",
+          "paper_id" : 4836,
+          "paper_year" : 2015,
+          "paper_title" : "Um Modelo para Apoiar Designers de Sistemas Colaborativos na Antecipação de Cenários",
+          "paper_abstract_EN" : "Nowadays collaborative systems often present users with flexibility to customize different aspects according to their contexts or needs. Designers of these systems must define the possible customizations to be offered to users at design time. To do so, they have to decide what choices to make available to users, and consider which scenarios may be generated by users’ decisions and their impact over time in other users’ interactions. In this paper, we propose a modeling language that supports designers in this activity by allowing them to describe users’ choices and actions over time and their impacts. Based on this description a scenario generator describes the situations that users can create by their choices. Exploring the scenarios generated at design time, the designer can inspect if any of the scenarios represent undesirable situations for end users. A preliminary evaluation of the model is presented and discussed",
+          "keyword" : "collaborative systems design"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "TAmxCnIBjJXsSiKIScDY",
+        "_score" : 28.171955,
+        "_source" : {
+          "person_name" : "Ana R. Carballo",
+          "paper_id" : 4554,
+          "paper_year" : 2001,
+          "paper_title" : "Personal and group spaces: Integrating resources for users of digital libraries",
+          "paper_abstract_EN" : "This paper presents an approach to integrate highly diverse resources available in digital libraries via personalizable interfaces and virtual collaboration areas. Digital libraries comprise vast digital repositories and a wide range of services, user environments and interfaces, all intended to support learning and collaborative research activities. We are developing a distributed digital library for which services and interfaces include, for example, mobile agents for federated information retrieval, recommendation agents, 3D visualization aids, and access to digital documents that support specific courses and projects. The diversity of these interfaces, plus the volume and dynamism of the digital library?s underlying collections, result in a complexity that has the potential to make the digital library unwieldy for the user. In order to assist users in dealing with this complexity, we have designed environments, termed personal and group spaces, which provide users with means to access and control all available resources in a uniform fashion from a single vantage point. We discuss our design and development experiences as well as initial usage results.",
+          "keyword" : "collaborative interfaces"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "UgmxCnIBjJXsSiKIScDY",
+        "_score" : 28.171955,
+        "_source" : {
+          "person_name" : "Carlos Proal",
+          "paper_id" : 4554,
+          "paper_year" : 2001,
+          "paper_title" : "Personal and group spaces: Integrating resources for users of digital libraries",
+          "paper_abstract_EN" : "This paper presents an approach to integrate highly diverse resources available in digital libraries via personalizable interfaces and virtual collaboration areas. Digital libraries comprise vast digital repositories and a wide range of services, user environments and interfaces, all intended to support learning and collaborative research activities. We are developing a distributed digital library for which services and interfaces include, for example, mobile agents for federated information retrieval, recommendation agents, 3D visualization aids, and access to digital documents that support specific courses and projects. The diversity of these interfaces, plus the volume and dynamism of the digital library?s underlying collections, result in a complexity that has the potential to make the digital library unwieldy for the user. In order to assist users in dealing with this complexity, we have designed environments, termed personal and group spaces, which provide users with means to access and control all available resources in a uniform fashion from a single vantage point. We discuss our design and development experiences as well as initial usage results.",
+          "keyword" : "collaborative interfaces"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "aAmxCnIBjJXsSiKIScDY",
+        "_score" : 28.171955,
+        "_source" : {
+          "person_name" : "Dámaris Pérez",
+          "paper_id" : 4554,
+          "paper_year" : 2001,
+          "paper_title" : "Personal and group spaces: Integrating resources for users of digital libraries",
+          "paper_abstract_EN" : "This paper presents an approach to integrate highly diverse resources available in digital libraries via personalizable interfaces and virtual collaboration areas. Digital libraries comprise vast digital repositories and a wide range of services, user environments and interfaces, all intended to support learning and collaborative research activities. We are developing a distributed digital library for which services and interfaces include, for example, mobile agents for federated information retrieval, recommendation agents, 3D visualization aids, and access to digital documents that support specific courses and projects. The diversity of these interfaces, plus the volume and dynamism of the digital library?s underlying collections, result in a complexity that has the potential to make the digital library unwieldy for the user. In order to assist users in dealing with this complexity, we have designed environments, termed personal and group spaces, which provide users with means to access and control all available resources in a uniform fashion from a single vantage point. We discuss our design and development experiences as well as initial usage results.",
+          "keyword" : "collaborative interfaces"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "dAmxCnIBjJXsSiKIScDY",
+        "_score" : 28.171955,
+        "_source" : {
+          "person_name" : "J. Alfredo Sánchez",
+          "paper_id" : 4554,
+          "paper_year" : 2001,
+          "paper_title" : "Personal and group spaces: Integrating resources for users of digital libraries",
+          "paper_abstract_EN" : "This paper presents an approach to integrate highly diverse resources available in digital libraries via personalizable interfaces and virtual collaboration areas. Digital libraries comprise vast digital repositories and a wide range of services, user environments and interfaces, all intended to support learning and collaborative research activities. We are developing a distributed digital library for which services and interfaces include, for example, mobile agents for federated information retrieval, recommendation agents, 3D visualization aids, and access to digital documents that support specific courses and projects. The diversity of these interfaces, plus the volume and dynamism of the digital library?s underlying collections, result in a complexity that has the potential to make the digital library unwieldy for the user. In order to assist users in dealing with this complexity, we have designed environments, termed personal and group spaces, which provide users with means to access and control all available resources in a uniform fashion from a single vantage point. We discuss our design and development experiences as well as initial usage results.",
+          "keyword" : "collaborative interfaces"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "LAmxCnIBjJXsSiKITMPb",
+        "_score" : 23.59084,
+        "_source" : {
+          "person_name" : "Raquel Oliveira Prates",
+          "paper_id" : 4643,
+          "paper_year" : 2008,
+          "paper_title" : "Avaliação da Manas na Identificação de Problemas de Impacto Social: Um Estudo de Caso",
+          "paper_abstract_EN" : "Success of collaborative systems is closely related to its social impact on users. Manas is one of the few available proposals that aim at supporting designers of collaborative systems to take the social impact of their decisions into consideration during design. In this paper we present an evaluation of Manas. The case study conducted shows that Manas is able to point out real social problems caused by a collaborative system. It also provided indicators on the expressivity of Manas design language",
+          "keyword" : "manas"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "LQmxCnIBjJXsSiKITMPb",
+        "_score" : 23.59084,
+        "_source" : {
+          "person_name" : "Raquel Oliveira Prates",
+          "paper_id" : 4643,
+          "paper_year" : 2008,
+          "paper_title" : "Avaliação da Manas na Identificação de Problemas de Impacto Social: Um Estudo de Caso",
+          "paper_abstract_EN" : "Success of collaborative systems is closely related to its social impact on users. Manas is one of the few available proposals that aim at supporting designers of collaborative systems to take the social impact of their decisions into consideration during design. In this paper we present an evaluation of Manas. The case study conducted shows that Manas is able to point out real social problems caused by a collaborative system. It also provided indicators on the expressivity of Manas design language",
+          "keyword" : "mediated communication"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "LgmxCnIBjJXsSiKITMPb",
+        "_score" : 23.59084,
+        "_source" : {
+          "person_name" : "Raquel Oliveira Prates",
+          "paper_id" : 4643,
+          "paper_year" : 2008,
+          "paper_title" : "Avaliação da Manas na Identificação de Problemas de Impacto Social: Um Estudo de Caso",
+          "paper_abstract_EN" : "Success of collaborative systems is closely related to its social impact on users. Manas is one of the few available proposals that aim at supporting designers of collaborative systems to take the social impact of their decisions into consideration during design. In this paper we present an evaluation of Manas. The case study conducted shows that Manas is able to point out real social problems caused by a collaborative system. It also provided indicators on the expressivity of Manas design language",
+          "keyword" : "semiotic engineering"
+        }
+      },
+      {
+        "_index" : "artigos",
+        "_type" : "_doc",
+        "_id" : "LwmxCnIBjJXsSiKITMPb",
+        "_score" : 23.59084,
+        "_source" : {
+          "person_name" : "Raquel Oliveira Prates",
+          "paper_id" : 4643,
+          "paper_year" : 2008,
+          "paper_title" : "Avaliação da Manas na Identificação de Problemas de Impacto Social: Um Estudo de Caso",
+          "paper_abstract_EN" : "Success of collaborative systems is closely related to its social impact on users. Manas is one of the few available proposals that aim at supporting designers of collaborative systems to take the social impact of their decisions into consideration during design. In this paper we present an evaluation of Manas. The case study conducted shows that Manas is able to point out real social problems caused by a collaborative system. It also provided indicators on the expressivity of Manas design language",
+          "keyword" : "sociability"
+        }
+      }
+    ]
+  }
+}

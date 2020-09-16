@@ -1,0 +1,5 @@
+POST /_bulk
+ {"index" : {"_index":"artigos", "_type" : "_doc"}}
+ {"person_name": "Ana Paula Ribeiro","paper_id": 4517,"paper_year": 1998,"paper_title": "Classificão Semântica Automática de Documentos da WWW","paper_abstract_EN": "NA",   "keyword": "comportamento dos usuários"}
+ {"index" : {"_index":"artigos", "_type" : "_doc"}}
+ {"person_name": "Ana Paula Ribeiro","paper_id": 4517,"paper_year": 1998,"paper_title": "Classificão Semântica Automática de Documentos da WWW","paper_abstract_EN": "NA","keyword": "www"}

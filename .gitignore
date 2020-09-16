@@ -35,7 +35,6 @@ GitHub.sublime-settings
 
 #para ignorar a pasta vendor do elasticsearch
 vendor/
-requisicoes/
 RS.sublime-project
 
 
